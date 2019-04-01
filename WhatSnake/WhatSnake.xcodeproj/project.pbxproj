@@ -14,6 +14,7 @@
 		99DB7EF1225229CF005B44E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99DB7EEF225229CF005B44E8 /* LaunchScreen.storyboard */; };
 		99DB7EFC225229CF005B44E8 /* WhatSnakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB7EFB225229CF005B44E8 /* WhatSnakeTests.swift */; };
 		99DB7F07225229CF005B44E8 /* WhatSnakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB7F06225229CF005B44E8 /* WhatSnakeUITests.swift */; };
+		99DB7F1522522FBB005B44E8 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB7F1422522FBB005B44E8 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		99DB7F02225229CF005B44E8 /* WhatSnakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatSnakeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DB7F06225229CF005B44E8 /* WhatSnakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatSnakeUITests.swift; sourceTree = "<group>"; };
 		99DB7F08225229CF005B44E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99DB7F1422522FBB005B44E8 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				99DB7EE6225229CE005B44E8 /* AppDelegate.swift */,
 				99DB7EE8225229CE005B44E8 /* ViewController.swift */,
 				99DB7EEA225229CE005B44E8 /* Main.storyboard */,
+				99DB7F1422522FBB005B44E8 /* CameraViewController.swift */,
 				99DB7EED225229CF005B44E8 /* Assets.xcassets */,
 				99DB7EEF225229CF005B44E8 /* LaunchScreen.storyboard */,
 				99DB7EF2225229CF005B44E8 /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				99DB7EE9225229CE005B44E8 /* ViewController.swift in Sources */,
 				99DB7EE7225229CE005B44E8 /* AppDelegate.swift in Sources */,
+				99DB7F1522522FBB005B44E8 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

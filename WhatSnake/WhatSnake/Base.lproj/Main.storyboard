@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.58695652173915"/>
         </scene>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="33b-9A-ji7">
             <objects>
-                <viewController id="cPT-Nc-BtY" sceneMemberID="viewController">
+                <viewController id="cPT-Nc-BtY" customClass="CameraViewController" customModule="WhatSnake" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4ID-Aw-Jdu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,12 +80,13 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzJ-J8-Cka">
                                         <rect key="frame" x="175" y="0.0" width="64" height="64"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="Dv0-PR-XMr"/>
                                             <constraint firstAttribute="width" constant="64" id="KRt-6o-ULj"/>
                                         </constraints>
                                         <state key="normal" title="Button">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -94,7 +95,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="kzJ-J8-Cka" secondAttribute="bottom" id="SoC-3q-1jN"/>
                                     <constraint firstItem="kzJ-J8-Cka" firstAttribute="centerX" secondItem="sMC-ig-Ucw" secondAttribute="centerX" id="WWY-OE-8ho"/>
@@ -102,16 +103,73 @@
                                     <constraint firstItem="kzJ-J8-Cka" firstAttribute="top" secondItem="sMC-ig-Ucw" secondAttribute="top" id="c8N-Br-sRo"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0d-Te-Wx9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hD2-c1-gdD">
+                                        <rect key="frame" x="32" y="0.0" width="64" height="64"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="S6l-cE-VdF"/>
+                                            <constraint firstAttribute="height" constant="64" id="WV3-ab-7Je"/>
+                                        </constraints>
+                                        <state key="normal" title="Return">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="OnReturnButtonTouchUpInside:" destination="cPT-Nc-BtY" eventType="touchUpInside" id="YB5-3H-Uy3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqc-sl-JaG">
+                                        <rect key="frame" x="318" y="0.0" width="64" height="64"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="4NG-KU-oi1"/>
+                                            <constraint firstAttribute="height" constant="64" id="Ibn-dc-cwA"/>
+                                        </constraints>
+                                        <state key="normal" title="Setting">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wqc-sl-JaG" secondAttribute="bottom" id="2Zq-dM-Iyy"/>
+                                    <constraint firstAttribute="height" constant="64" id="DKI-IZ-5ia"/>
+                                    <constraint firstAttribute="bottom" secondItem="hD2-c1-gdD" secondAttribute="bottom" id="O4E-fJ-Wbg"/>
+                                    <constraint firstItem="hD2-c1-gdD" firstAttribute="top" secondItem="H0d-Te-Wx9" secondAttribute="top" id="fgr-CE-J1y"/>
+                                    <constraint firstItem="hD2-c1-gdD" firstAttribute="leading" secondItem="H0d-Te-Wx9" secondAttribute="leading" constant="32" id="jto-5Q-kCv"/>
+                                    <constraint firstItem="wqc-sl-JaG" firstAttribute="top" secondItem="H0d-Te-Wx9" secondAttribute="top" id="qSu-Um-lMf"/>
+                                    <constraint firstAttribute="trailing" secondItem="wqc-sl-JaG" secondAttribute="trailing" constant="32" id="sF6-ik-qBr"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sMC-ig-Ucw" firstAttribute="trailing" secondItem="a9K-s7-iNB" secondAttribute="trailing" id="65P-yk-PgV"/>
+                            <constraint firstItem="H0d-Te-Wx9" firstAttribute="top" secondItem="4ID-Aw-Jdu" secondAttribute="top" id="MkK-9a-sgv"/>
+                            <constraint firstItem="H0d-Te-Wx9" firstAttribute="trailing" secondItem="a9K-s7-iNB" secondAttribute="trailing" id="NE0-JU-SYP"/>
                             <constraint firstItem="sMC-ig-Ucw" firstAttribute="centerX" secondItem="4ID-Aw-Jdu" secondAttribute="centerX" id="NXe-9s-4MR"/>
+                            <constraint firstItem="H0d-Te-Wx9" firstAttribute="leading" secondItem="a9K-s7-iNB" secondAttribute="leading" id="QGS-8E-beB"/>
                             <constraint firstItem="sMC-ig-Ucw" firstAttribute="bottom" secondItem="a9K-s7-iNB" secondAttribute="bottom" id="gBx-vH-LGZ"/>
+                            <constraint firstItem="H0d-Te-Wx9" firstAttribute="centerX" secondItem="4ID-Aw-Jdu" secondAttribute="centerX" id="hjg-pp-zHR"/>
                             <constraint firstItem="sMC-ig-Ucw" firstAttribute="leading" secondItem="a9K-s7-iNB" secondAttribute="leading" id="lqH-kA-nwa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a9K-s7-iNB"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="ReturnSegue" id="fZ5-3t-KBq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P8c-Au-3gI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

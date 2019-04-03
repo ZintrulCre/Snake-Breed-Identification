@@ -21,7 +21,7 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var camera_view: UIView!
     
     @IBAction func OnReturnButtonTouchUpInside(_ sender: Any) {
-        performSegue(withIdentifier: "ReturnSegue", sender: nil)
+        performSegue(withIdentifier: "CameraReturnSegue", sender: nil)
     }
     
     @IBAction func OnSwitchButtonTouchUpInside(_ sender: Any) {

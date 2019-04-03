@@ -14,9 +14,23 @@ class IdentificationViewController: UIViewController {
     var image:UIImage!
     @IBOutlet weak var image_view: UIImageView!
     
+    @IBAction func OnReturnButtonTouchUpInside(_ sender: Any) {
+        performSegue(withIdentifier: "IdentificationReturnSegue", sender: nil)
+    }
+    
+    @IBAction func OnSaveButtonTouchUpInside(_ sender: Any) {
+        UIImageWriteToSavedPhotosAlbum(self.image, nil, nil, nil)
+        let alert = UIAlertController(title: "Photo Saved", message: "Save photo successfully!", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "save", style: .default, handler: nil)
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         image_view.image = self.image
+        image_view.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
         IdentifyImage(image: image_view.image!)
     }
     

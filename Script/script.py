@@ -8,7 +8,7 @@ if len(sys.argv) < 2 or len(sys.argv) > 2:
     sys.exit()
 start = time.time()
 target = sys.argv[1]
-i, j = 0, 0
+i, j = 1000, 0
 path = os.getcwd() + "/"
 folder = path + target
 if not os.path.exists(folder):

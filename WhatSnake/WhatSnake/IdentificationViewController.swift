@@ -30,7 +30,6 @@ class IdentificationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         image_view.image = self.image
-        image_view.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
         IdentifyImage(image: image_view.image!)
     }
     

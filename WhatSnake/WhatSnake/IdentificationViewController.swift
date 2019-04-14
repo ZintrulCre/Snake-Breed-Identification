@@ -13,6 +13,15 @@ import Vision
 class IdentificationViewController: UIViewController {
     var image:UIImage!
     @IBOutlet weak var image_view: UIImageView!
+    @IBOutlet weak var type_text: UITextView!
+    @IBOutlet weak var type: UITextView!
+    @IBOutlet weak var venom_text: UITextView!
+    @IBOutlet weak var venomous_text: UITextView!
+    @IBOutlet weak var non_venomous_text: UITextView!
+    @IBOutlet weak var info_text: UITextView!
+    
+    
+    
     
     @IBAction func OnReturnButtonTouchUpInside(_ sender: Any) {
         performSegue(withIdentifier: "IdentificationReturnSegue", sender: nil)
@@ -29,6 +38,13 @@ class IdentificationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        type_text.isEditable = false
+        type.isEditable = false
+        venom_text.isEditable = false
+        venomous_text.isEditable = false
+        non_venomous_text.isEditable = false
+        info_text.isEditable = false
+        
         image_view.image = self.image
         IdentifyImage(image: image_view.image!)
     }

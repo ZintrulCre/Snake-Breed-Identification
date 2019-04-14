@@ -36,6 +36,21 @@
                                     <action selector="OnCameraButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ujD-Bj-VR3"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oWk-ps-xSV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="632"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BZm-qt-SAK">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BZm-qt-SAK" id="LxW-gt-3Vu">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -168,6 +183,141 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qhj-rk-lj9" userLabel="Right View">
+                                <rect key="frame" x="241" y="28" width="165" height="406"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gjb-Mw-01F" userLabel="Type">
+                                        <rect key="frame" x="0.0" y="32" width="165" height="64"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="8qI-VC-6L2"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="temp">
+                                                <attributes>
+                                                    <font key="NSFont" size="18" name="Rockwell-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zh7-uu-IMG" userLabel="Type Text">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="32"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="LGM-SI-Sfq"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Type">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="20" name="Rockwell-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fgR-A4-LNE" userLabel="Venom Text">
+                                        <rect key="frame" x="0.0" y="96" width="165" height="32"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="gEN-t5-elT"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Venom">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="20" name="Rockwell-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bjl-Xz-4dI" userLabel="Venomous Text">
+                                        <rect key="frame" x="0.0" y="128" width="165" height="32"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="BeV-wL-AnJ"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="venomous">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="18" name="Rockwell-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hch-DN-5Zj" userLabel="Non-Venomous Text">
+                                        <rect key="frame" x="0.0" y="128" width="165" height="32"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="zvG-nc-icK"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="non-venomous">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="18" name="Rockwell-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BBx-Df-GBf" userLabel="Loading Text">
+                                        <rect key="frame" x="0.0" y="96" width="165" height="32"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="2yx-p5-1VJ"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Loading">
+                                                <attributes>
+                                                    <font key="NSFont" size="18" name="Rockwell-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Vkn-Pf-42c">
+                                        <rect key="frame" x="70.666666666666686" y="128" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="Jv5-2a-8II"/>
+                                            <constraint firstAttribute="width" constant="24" id="ssN-l3-mOP"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hch-DN-5Zj" secondAttribute="trailing" id="06I-Q7-t3C"/>
+                                    <constraint firstItem="Vkn-Pf-42c" firstAttribute="top" secondItem="fgR-A4-LNE" secondAttribute="bottom" id="2Xk-Zx-pMv"/>
+                                    <constraint firstItem="Bjl-Xz-4dI" firstAttribute="leading" secondItem="qhj-rk-lj9" secondAttribute="leading" id="4CL-JP-oku"/>
+                                    <constraint firstItem="BBx-Df-GBf" firstAttribute="top" secondItem="gjb-Mw-01F" secondAttribute="bottom" id="5bU-S5-ntg"/>
+                                    <constraint firstAttribute="trailing" secondItem="zh7-uu-IMG" secondAttribute="trailing" id="6NV-39-Hgu"/>
+                                    <constraint firstItem="fgR-A4-LNE" firstAttribute="top" secondItem="gjb-Mw-01F" secondAttribute="bottom" id="AHk-TD-ebl"/>
+                                    <constraint firstAttribute="trailing" secondItem="BBx-Df-GBf" secondAttribute="trailing" id="M43-VQ-wiE"/>
+                                    <constraint firstItem="zh7-uu-IMG" firstAttribute="leading" secondItem="qhj-rk-lj9" secondAttribute="leading" id="acD-bL-SsB"/>
+                                    <constraint firstItem="fgR-A4-LNE" firstAttribute="leading" secondItem="qhj-rk-lj9" secondAttribute="leading" id="cOL-ks-g7N"/>
+                                    <constraint firstItem="zh7-uu-IMG" firstAttribute="top" secondItem="qhj-rk-lj9" secondAttribute="top" id="got-5v-uoj"/>
+                                    <constraint firstItem="hch-DN-5Zj" firstAttribute="leading" secondItem="qhj-rk-lj9" secondAttribute="leading" id="jVy-mg-wgE"/>
+                                    <constraint firstAttribute="trailing" secondItem="gjb-Mw-01F" secondAttribute="trailing" id="jvw-Qz-LXI"/>
+                                    <constraint firstItem="gjb-Mw-01F" firstAttribute="top" secondItem="zh7-uu-IMG" secondAttribute="bottom" id="kOD-Gx-XLW"/>
+                                    <constraint firstItem="hch-DN-5Zj" firstAttribute="top" secondItem="fgR-A4-LNE" secondAttribute="bottom" id="m0z-jn-mkA"/>
+                                    <constraint firstItem="Bjl-Xz-4dI" firstAttribute="top" secondItem="fgR-A4-LNE" secondAttribute="bottom" id="o5Z-eS-Rsf"/>
+                                    <constraint firstItem="Vkn-Pf-42c" firstAttribute="centerX" secondItem="qhj-rk-lj9" secondAttribute="centerX" id="oKC-zO-zjn"/>
+                                    <constraint firstItem="gjb-Mw-01F" firstAttribute="leading" secondItem="qhj-rk-lj9" secondAttribute="leading" id="oUM-Y4-hJj"/>
+                                    <constraint firstItem="BBx-Df-GBf" firstAttribute="leading" secondItem="qhj-rk-lj9" secondAttribute="leading" id="pMc-5f-aqD"/>
+                                    <constraint firstAttribute="trailing" secondItem="fgR-A4-LNE" secondAttribute="trailing" id="pOS-bp-8XH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bjl-Xz-4dI" secondAttribute="trailing" id="uSf-02-D2R"/>
+                                </constraints>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GXS-lW-7aN">
                                 <rect key="frame" x="0.0" y="20" width="233" height="414"/>
                                 <constraints>
@@ -177,126 +327,67 @@
                                     <constraint firstAttribute="height" constant="414" id="Wfs-4e-31d"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nh2-2D-MJZ">
-                                <rect key="frame" x="0.0" y="672" width="64" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="8Ev-NB-WMX"/>
-                                    <constraint firstAttribute="height" constant="64" id="vhb-lK-MNK"/>
-                                </constraints>
-                                <state key="normal" title="Return" image="Close.png">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="OnReturnButtonTouchUpInside:" destination="Acz-yJ-xAc" eventType="touchUpInside" id="AKD-Ev-XJS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obk-1p-C1K">
-                                <rect key="frame" x="350" y="672" width="64" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="5Mb-cG-PdB"/>
-                                    <constraint firstAttribute="width" constant="64" id="deu-pX-8bh"/>
-                                </constraints>
-                                <state key="normal" title="Save" image="Save.png">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="OnSaveButtonTouchUpInside:" destination="Acz-yJ-xAc" eventType="touchUpInside" id="CdU-vo-TfS"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gjb-Mw-01F" userLabel="Type Name">
-                                <rect key="frame" x="241" y="81" width="153" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HY6-MV-X89" userLabel="Info Text">
+                                <rect key="frame" x="0.0" y="442" width="414" height="94"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="temp">
-                                        <attributes>
-                                            <font key="NSFont" size="18" name="Rockwell-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hch-DN-5Zj" userLabel="Non-Venomous Text">
-                                <rect key="frame" x="241" y="232" width="153" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="non-venomous">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="18" name="Rockwell-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bjl-Xz-4dI" userLabel="Venomous Text">
-                                <rect key="frame" x="241" y="232" width="153" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="venomous">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="18" name="Rockwell-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fgR-A4-LNE" userLabel="Venom Text">
-                                <rect key="frame" x="241" y="195" width="153" height="40.333333333333336"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Venom">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="20" name="Rockwell-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HY6-MV-X89" userLabel="Info Text">
-                                <rect key="frame" x="0.0" y="442" width="414" height="230"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zh7-uu-IMG" userLabel="Type Text">
-                                <rect key="frame" x="241" y="53" width="153" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Type">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="20" name="Rockwell-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2uu-D8-56j" userLabel="Buttom View">
+                                <rect key="frame" x="0.0" y="672" width="414" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nh2-2D-MJZ">
+                                        <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="D9S-Js-F6k"/>
+                                            <constraint firstAttribute="width" constant="48" id="Zy5-i3-Qa7"/>
+                                        </constraints>
+                                        <state key="normal" title="Return" image="Close.png">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="OnReturnButtonTouchUpInside:" destination="Acz-yJ-xAc" eventType="touchUpInside" id="AKD-Ev-XJS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obk-1p-C1K">
+                                        <rect key="frame" x="358" y="8" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="4Sn-yJ-gUm"/>
+                                            <constraint firstAttribute="height" constant="48" id="DLz-Ow-beA"/>
+                                        </constraints>
+                                        <state key="normal" title="Save" image="Save.png">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="OnSaveButtonTouchUpInside:" destination="Acz-yJ-xAc" eventType="touchUpInside" id="CdU-vo-TfS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstItem="Nh2-2D-MJZ" firstAttribute="top" secondItem="2uu-D8-56j" secondAttribute="top" constant="8" id="081-gC-saP"/>
+                                    <constraint firstItem="Obk-1p-C1K" firstAttribute="top" secondItem="2uu-D8-56j" secondAttribute="top" constant="8" id="HwT-tj-Qek"/>
+                                    <constraint firstAttribute="trailing" secondItem="Obk-1p-C1K" secondAttribute="trailing" constant="8" id="QcL-Su-U42"/>
+                                    <constraint firstAttribute="bottom" secondItem="Obk-1p-C1K" secondAttribute="bottom" constant="8" id="ffu-uY-6QG"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nh2-2D-MJZ" secondAttribute="bottom" constant="8" id="lD2-pq-QCI"/>
+                                    <constraint firstItem="Nh2-2D-MJZ" firstAttribute="leading" secondItem="2uu-D8-56j" secondAttribute="leading" constant="8" id="oJe-Tt-SUB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HY6-MV-X89" firstAttribute="top" secondItem="GXS-lW-7aN" secondAttribute="bottom" constant="8" id="9Cz-VE-6SF"/>
                             <constraint firstItem="GXS-lW-7aN" firstAttribute="top" secondItem="hgf-QG-Hj2" secondAttribute="top" id="CcZ-ha-FvX"/>
-                            <constraint firstItem="Nh2-2D-MJZ" firstAttribute="leading" secondItem="hgf-QG-Hj2" secondAttribute="leading" id="DeP-h2-4ms"/>
-                            <constraint firstItem="Nh2-2D-MJZ" firstAttribute="bottom" secondItem="hgf-QG-Hj2" secondAttribute="bottom" id="HQr-Uc-ks0"/>
+                            <constraint firstItem="qhj-rk-lj9" firstAttribute="leading" secondItem="GXS-lW-7aN" secondAttribute="trailing" constant="8" id="EiF-ZX-JEx"/>
                             <constraint firstItem="HY6-MV-X89" firstAttribute="trailing" secondItem="hgf-QG-Hj2" secondAttribute="trailing" id="KNC-4L-crV"/>
-                            <constraint firstItem="Nh2-2D-MJZ" firstAttribute="top" secondItem="HY6-MV-X89" secondAttribute="bottom" id="gQr-eL-OyM"/>
-                            <constraint firstItem="Obk-1p-C1K" firstAttribute="bottom" secondItem="hgf-QG-Hj2" secondAttribute="bottom" id="mSI-tR-RsU"/>
-                            <constraint firstItem="Nh2-2D-MJZ" firstAttribute="top" secondItem="HY6-MV-X89" secondAttribute="bottom" id="qDI-kH-dUD"/>
+                            <constraint firstItem="2uu-D8-56j" firstAttribute="trailing" secondItem="hgf-QG-Hj2" secondAttribute="trailing" id="KPa-pA-uB7"/>
+                            <constraint firstItem="qhj-rk-lj9" firstAttribute="top" secondItem="hgf-QG-Hj2" secondAttribute="top" constant="8" id="QGp-Z9-1A7"/>
+                            <constraint firstItem="2uu-D8-56j" firstAttribute="bottom" secondItem="hgf-QG-Hj2" secondAttribute="bottom" id="T1y-v2-jjV"/>
+                            <constraint firstItem="hgf-QG-Hj2" firstAttribute="trailing" secondItem="qhj-rk-lj9" secondAttribute="trailing" constant="8" id="fVP-k5-Def"/>
+                            <constraint firstItem="2uu-D8-56j" firstAttribute="leading" secondItem="hgf-QG-Hj2" secondAttribute="leading" id="s6e-RM-wjP"/>
                             <constraint firstItem="HY6-MV-X89" firstAttribute="leading" secondItem="hgf-QG-Hj2" secondAttribute="leading" id="sm5-OP-WUg"/>
-                            <constraint firstItem="Obk-1p-C1K" firstAttribute="trailing" secondItem="hgf-QG-Hj2" secondAttribute="trailing" id="vWg-tU-bZH"/>
+                            <constraint firstItem="HY6-MV-X89" firstAttribute="top" secondItem="qhj-rk-lj9" secondAttribute="bottom" constant="8" id="uPf-2h-g5K"/>
                             <constraint firstItem="GXS-lW-7aN" firstAttribute="leading" secondItem="hgf-QG-Hj2" secondAttribute="leading" id="zHA-KE-TBf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hgf-QG-Hj2"/>
@@ -304,6 +395,7 @@
                     <connections>
                         <outlet property="image_view" destination="GXS-lW-7aN" id="OU1-rT-78p"/>
                         <outlet property="info_text" destination="HY6-MV-X89" id="xWZ-Vc-rGP"/>
+                        <outlet property="loading_text" destination="BBx-Df-GBf" id="A5N-3w-Bph"/>
                         <outlet property="non_venomous_text" destination="hch-DN-5Zj" id="7fv-AW-r0y"/>
                         <outlet property="type" destination="gjb-Mw-01F" id="0ig-Mo-ch6"/>
                         <outlet property="type_text" destination="zh7-uu-IMG" id="Sf7-xy-wgv"/>
@@ -326,6 +418,6 @@
         <image name="Save.png" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="r36-OI-73V"/>
+        <segue reference="Y1k-ti-3uJ"/>
     </inferredMetricsTieBreakers>
 </document>

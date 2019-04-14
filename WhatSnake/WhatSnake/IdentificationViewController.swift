@@ -19,6 +19,8 @@ class IdentificationViewController: UIViewController {
     @IBOutlet weak var venomous_text: UITextView!
     @IBOutlet weak var non_venomous_text: UITextView!
     @IBOutlet weak var info_text: UITextView!
+    @IBOutlet weak var loading_text: UITextView!
+    
     
     
     

@@ -5,7 +5,7 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>UIStatusBarHidden</key>
-	<true/>
+	<false/>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Allow What Snake to save photos</string>
 	<key>NSPhotoLibraryUsageDescription</key>

@@ -13,26 +13,16 @@ import Vision
 class IdentificationViewController: UIViewController {
     var breed: String?
     var image: UIImage!
-    @IBOutlet weak var image_view: UIImageView!
-    @IBOutlet weak var info_text: UITextView!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
-    @IBAction func OnReturnButtonTouchUpInside(_ sender: Any) {
-        performSegue(withIdentifier: "IdentificationReturnSegue", sender: nil)
-    }
-    
-    @IBAction func OnSaveButtonTouchUpInside(_ sender: Any) {
-        UIImageWriteToSavedPhotosAlbum(self.image, nil, nil, nil)
-        let alert = UIAlertController(title: "Photo Saved", message: "Save photo successfully!", preferredStyle: .alert)
-        let ok = UIAlertAction(title: "save", style: .default, handler: nil)
-        alert.addAction(ok)
-        self.present(alert, animated: true, completion: nil)
-        
+    @IBAction func OnCancelButtonTouchUpInside(_ sender: Any) {
+        performSegue(withIdentifier: "CancelSegue", sender: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        image_view.image = self.image
-        IdentifyImage(image: image_view.image!)
+        indicator.startAnimating()
+        IdentifyImage(image: self.image!)
     }
     
     func IdentifyImage(image:UIImage) {
@@ -51,8 +41,8 @@ class IdentificationViewController: UIViewController {
             print (most_confident.identifier)
             print (most_confident.confidence)
             DispatchQueue.main.async {
-                self.breed = most_confident.identifier
-                print(self.breed!)
+                self.breed = most_confident.identifier 
+                self.performSegue(withIdentifier: "IdentifyingToDisplaySegue", sender: nil)
             }
         }
         
@@ -63,6 +53,14 @@ class IdentificationViewController: UIViewController {
             } catch {
                 print(error)
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "IdentifyingToDisplaySegue" {
+            let display_view = segue.destination as! DisplayViewController
+            display_view.image = self.image
+            display_view.breed = self.breed
         }
     }
 }

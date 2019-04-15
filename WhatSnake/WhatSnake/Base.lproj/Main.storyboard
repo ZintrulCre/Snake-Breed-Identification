@@ -131,22 +131,6 @@
                                     <action selector="OnReturnButtonTouchUpInside:" destination="cPT-Nc-BtY" eventType="touchUpInside" id="YB5-3H-Uy3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqc-sl-JaG">
-                                <rect key="frame" x="350" y="640" width="64" height="64"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="4NG-KU-oi1"/>
-                                    <constraint firstAttribute="height" constant="64" id="Ibn-dc-cwA"/>
-                                </constraints>
-                                <state key="normal" title="Setting">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tat-0V-gOk">
                                 <rect key="frame" x="366" y="52" width="48" height="48"/>
                                 <constraints>
@@ -190,12 +174,10 @@
                             <constraint firstItem="B0Q-RL-j89" firstAttribute="top" secondItem="4ID-Aw-Jdu" secondAttribute="top" id="K7W-Yh-p5H"/>
                             <constraint firstItem="hD2-c1-gdD" firstAttribute="leading" secondItem="a9K-s7-iNB" secondAttribute="leading" id="TKn-a8-hVF"/>
                             <constraint firstItem="kzJ-J8-Cka" firstAttribute="centerX" secondItem="4ID-Aw-Jdu" secondAttribute="centerX" id="gN9-gp-eMp"/>
-                            <constraint firstItem="wqc-sl-JaG" firstAttribute="trailing" secondItem="a9K-s7-iNB" secondAttribute="trailing" id="gmj-aa-vo1"/>
                             <constraint firstItem="B0Q-RL-j89" firstAttribute="trailing" secondItem="a9K-s7-iNB" secondAttribute="trailing" id="h3D-hG-UD2"/>
                             <constraint firstItem="B0Q-RL-j89" firstAttribute="leading" secondItem="a9K-s7-iNB" secondAttribute="leading" id="m3J-B4-tZB"/>
                             <constraint firstItem="Tat-0V-gOk" firstAttribute="top" secondItem="a9K-s7-iNB" secondAttribute="top" constant="32" id="meg-ep-s2O"/>
                             <constraint firstItem="hD2-c1-gdD" firstAttribute="top" secondItem="a9K-s7-iNB" secondAttribute="top" constant="32" id="n0U-gi-fxi"/>
-                            <constraint firstAttribute="bottom" secondItem="wqc-sl-JaG" secondAttribute="bottom" constant="32" id="o8o-ng-Xot"/>
                             <constraint firstItem="B0Q-RL-j89" firstAttribute="bottom" secondItem="a9K-s7-iNB" secondAttribute="bottom" id="xTr-t2-hpU"/>
                             <constraint firstItem="Tat-0V-gOk" firstAttribute="trailing" secondItem="a9K-s7-iNB" secondAttribute="trailing" id="yb2-hB-YvN"/>
                         </constraints>
@@ -204,7 +186,7 @@
                     <connections>
                         <outlet property="camera_view" destination="B0Q-RL-j89" id="zER-8S-kiP"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="CameraReturnSegue" id="fZ5-3t-KBq"/>
-                        <segue destination="Acz-yJ-xAc" kind="presentation" identifier="IdentificationSegue" id="vFk-dR-foU"/>
+                        <segue destination="dfD-5z-PTM" kind="presentation" identifier="IdentificationSegue" id="aO2-T6-nqH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P8c-Au-3gI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -212,9 +194,43 @@
             <point key="canvasLocation" x="807.24637681159425" y="138.58695652173915"/>
         </scene>
         <!--Identification View Controller-->
+        <scene sceneID="MpY-XY-InT">
+            <objects>
+                <viewController id="dfD-5z-PTM" customClass="IdentificationViewController" customModule="WhatSnake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YnC-1s-4m4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WKG-51-v7z">
+                                <rect key="frame" x="197" y="358" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpA-11-5vV">
+                                <rect key="frame" x="183" y="510" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="OnCancelButtonTouchUpInside:" destination="dfD-5z-PTM" eventType="touchUpInside" id="ahR-SN-BeI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ifI-67-wsl"/>
+                    </view>
+                    <connections>
+                        <outlet property="indicator" destination="WKG-51-v7z" id="9XO-fs-nk1"/>
+                        <segue destination="Acz-yJ-xAc" kind="presentation" identifier="IdentifyingToDisplaySegue" id="OE8-pz-djD"/>
+                        <segue destination="cPT-Nc-BtY" kind="presentation" identifier="CancelSegue" id="rUX-Xf-Wkx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ik-bY-lDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="139"/>
+        </scene>
+        <!--Display View Controller-->
         <scene sceneID="E54-pC-h3I">
             <objects>
-                <viewController id="Acz-yJ-xAc" customClass="IdentificationViewController" customModule="WhatSnake" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Acz-yJ-xAc" customClass="DisplayViewController" customModule="WhatSnake" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WnB-ts-DXf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -297,7 +313,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="OnReturnButtonTouchUpInside:" destination="Acz-yJ-xAc" eventType="touchUpInside" id="AKD-Ev-XJS"/>
+                                            <action selector="OnReturnButtonTouchUpInside:" destination="Acz-yJ-xAc" eventType="touchUpInside" id="KYd-lM-M7B"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obk-1p-C1K">
@@ -310,7 +326,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="OnSaveButtonTouchUpInside:" destination="Acz-yJ-xAc" eventType="touchUpInside" id="CdU-vo-TfS"/>
+                                            <action selector="OnSaveButtonTouchUpInside:" destination="Acz-yJ-xAc" eventType="touchUpInside" id="wkN-H1-ykZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -364,14 +380,17 @@
                         <viewLayoutGuide key="safeArea" id="hgf-QG-Hj2"/>
                     </view>
                     <connections>
-                        <outlet property="image_view" destination="GXS-lW-7aN" id="OU1-rT-78p"/>
-                        <outlet property="info_text" destination="HY6-MV-X89" id="xWZ-Vc-rGP"/>
+                        <outlet property="distribution" destination="nHi-N3-QmK" id="n8l-wd-ZcO"/>
+                        <outlet property="image_view" destination="GXS-lW-7aN" id="fk6-cA-jXv"/>
+                        <outlet property="info_text" destination="HY6-MV-X89" id="uZH-g2-EsS"/>
+                        <outlet property="type_name" destination="mY6-IM-zhF" id="Dfw-l1-aEo"/>
+                        <outlet property="venomous" destination="Yjm-2k-bMZ" id="yK6-qr-Qgs"/>
                         <segue destination="cPT-Nc-BtY" kind="presentation" identifier="IdentificationReturnSegue" id="Y1k-ti-3uJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wzn-Ua-wlb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1478.2608695652175" y="138.58695652173915"/>
+            <point key="canvasLocation" x="2475" y="139"/>
         </scene>
     </scenes>
     <resources>
@@ -383,6 +402,6 @@
         <image name="Save.png" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CGO-lS-jBK"/>
+        <segue reference="rUX-Xf-Wkx"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -37,3 +37,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 }
+
+
+class TableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var label_name: UILabel!
+    
+    func SetLabelName(name: String) {
+        self.label_name.text = name
+    }
+}

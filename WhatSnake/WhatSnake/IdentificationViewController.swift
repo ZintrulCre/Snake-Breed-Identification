@@ -11,19 +11,10 @@ import CoreML
 import Vision
 
 class IdentificationViewController: UIViewController {
-    var image:UIImage!
+    var breed: String?
+    var image: UIImage!
     @IBOutlet weak var image_view: UIImageView!
-    @IBOutlet weak var type_text: UITextView!
-    @IBOutlet weak var type: UITextView!
-    @IBOutlet weak var venom_text: UITextView!
-    @IBOutlet weak var venomous_text: UITextView!
-    @IBOutlet weak var non_venomous_text: UITextView!
     @IBOutlet weak var info_text: UITextView!
-    @IBOutlet weak var loading_text: UITextView!
-    
-    
-    
-    
     
     @IBAction func OnReturnButtonTouchUpInside(_ sender: Any) {
         performSegue(withIdentifier: "IdentificationReturnSegue", sender: nil)
@@ -40,13 +31,6 @@ class IdentificationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        type_text.isEditable = false
-        type.isEditable = false
-        venom_text.isEditable = false
-        venomous_text.isEditable = false
-        non_venomous_text.isEditable = false
-        info_text.isEditable = false
-        
         image_view.image = self.image
         IdentifyImage(image: image_view.image!)
     }
@@ -67,8 +51,8 @@ class IdentificationViewController: UIViewController {
             print (most_confident.identifier)
             print (most_confident.confidence)
             DispatchQueue.main.async {
-                let breed = most_confident.identifier
-                print(breed)
+                self.breed = most_confident.identifier
+                print(self.breed!)
             }
         }
         

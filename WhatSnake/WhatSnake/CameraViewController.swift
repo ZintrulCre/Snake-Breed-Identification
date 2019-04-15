@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class CameraViewController: UIViewController {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var capture_session: AVCaptureSession?
     var capture_device: AVCaptureDevice?
     var back_camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
@@ -29,12 +29,36 @@ class CameraViewController: UIViewController {
         StartCaptureSession()
     }
     
+    @IBAction fileprivate func OnImportButtonTouchUpInside(_ sender: Any) {
+        let image_picker = UIImagePickerController()
+        image_picker.sourceType = UIImagePickerController.SourceType.photoLibrary
+        image_picker.allowsEditing = true
+        image_picker.delegate = self
+        self.present(image_picker, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let picked_image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        self.image = picked_image
+        self.dismiss(animated: true)
+        self.performSegue(withIdentifier: "IdentificationSegue", sender: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func OnCaptureButtonTouchUpInside(_ sender: Any) {
         photo_output?.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNeedsStatusBarAppearanceUpdate()
         StartCaptureSession()
     }
     

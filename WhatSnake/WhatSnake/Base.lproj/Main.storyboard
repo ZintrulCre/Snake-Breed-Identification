@@ -116,6 +116,24 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PER-Nd-P53">
+                                <rect key="frame" x="32" y="656" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="7Ka-XT-aNt"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="Czs-Ig-OkC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="Xz1-1N-gfm"/>
+                                    <constraint firstAttribute="height" constant="48" id="ZdL-AF-INr"/>
+                                </constraints>
+                                <state key="normal" title="Import"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="OnImportButtonTouchUpInside:" destination="cPT-Nc-BtY" eventType="touchUpInside" id="Tgq-jJ-vc5"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hD2-c1-gdD" userLabel="Return">
                                 <rect key="frame" x="0.0" y="52" width="48" height="48"/>
                                 <constraints>
@@ -174,6 +192,7 @@
                             <constraint firstItem="a9K-s7-iNB" firstAttribute="bottom" secondItem="kzJ-J8-Cka" secondAttribute="bottom" constant="32" id="AIO-qA-HXS"/>
                             <constraint firstItem="B0Q-RL-j89" firstAttribute="top" secondItem="4ID-Aw-Jdu" secondAttribute="top" id="K7W-Yh-p5H"/>
                             <constraint firstItem="hD2-c1-gdD" firstAttribute="leading" secondItem="a9K-s7-iNB" secondAttribute="leading" id="TKn-a8-hVF"/>
+                            <constraint firstItem="a9K-s7-iNB" firstAttribute="bottom" secondItem="PER-Nd-P53" secondAttribute="bottom" constant="32" id="ZvN-Ct-mpw"/>
                             <constraint firstItem="kzJ-J8-Cka" firstAttribute="centerX" secondItem="4ID-Aw-Jdu" secondAttribute="centerX" id="gN9-gp-eMp"/>
                             <constraint firstItem="B0Q-RL-j89" firstAttribute="trailing" secondItem="a9K-s7-iNB" secondAttribute="trailing" id="h3D-hG-UD2"/>
                             <constraint firstItem="B0Q-RL-j89" firstAttribute="leading" secondItem="a9K-s7-iNB" secondAttribute="leading" id="m3J-B4-tZB"/>
@@ -181,6 +200,7 @@
                             <constraint firstItem="hD2-c1-gdD" firstAttribute="top" secondItem="a9K-s7-iNB" secondAttribute="top" constant="32" id="n0U-gi-fxi"/>
                             <constraint firstItem="B0Q-RL-j89" firstAttribute="bottom" secondItem="a9K-s7-iNB" secondAttribute="bottom" id="xTr-t2-hpU"/>
                             <constraint firstItem="Tat-0V-gOk" firstAttribute="trailing" secondItem="a9K-s7-iNB" secondAttribute="trailing" id="yb2-hB-YvN"/>
+                            <constraint firstItem="PER-Nd-P53" firstAttribute="leading" secondItem="a9K-s7-iNB" secondAttribute="leading" constant="32" id="z8a-rO-5AC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a9K-s7-iNB"/>
                     </view>

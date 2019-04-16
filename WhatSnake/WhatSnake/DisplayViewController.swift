@@ -11,12 +11,14 @@ import UIKit
 class DisplayViewController: UIViewController {
     var breed: String?
     var image: UIImage!
+    var snake: Snake?
     
     @IBOutlet weak var image_view: UIImageView!
-    @IBOutlet weak var info_text: UITextView!
     @IBOutlet weak var type_name: UILabel!
     @IBOutlet weak var venomous: UILabel!
     @IBOutlet weak var distribution: UILabel!
+    @IBOutlet weak var info: UITextView!
+    
     
     @IBAction func OnSaveButtonTouchUpInside(_ sender: Any) {
         UIImageWriteToSavedPhotosAlbum(self.image, nil, nil, nil)
@@ -29,10 +31,16 @@ class DisplayViewController: UIViewController {
     @IBAction func OnReturnButtonTouchUpInside(_ sender: Any) {
         performSegue(withIdentifier: "IdentificationReturnSegue", sender: nil)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         image_view.image = self.image
-        print(self.breed)
+        if self.snake != nil {
+            self.type_name.text = self.snake?.name
+            self.venomous.text = self.snake!.venomous ? "venomous" : "non-venomous"
+            self.distribution.text = self.snake?.distribution
+            self.info.text = self.snake?.description
+        }
     }
     
 

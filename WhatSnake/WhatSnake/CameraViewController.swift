@@ -21,7 +21,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var camera_view: UIView!
     
     @IBAction func OnReturnButtonTouchUpInside(_ sender: Any) {
-        performSegue(withIdentifier: "CameraReturnSegue", sender: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func OnSwitchButtonTouchUpInside(_ sender: Any) {

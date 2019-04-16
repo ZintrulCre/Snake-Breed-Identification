@@ -21,9 +21,11 @@ class ViewController: UIViewController {
     var txts: [String] =  ["CarpetPython", "CoastalTaipan", "CommonDeathAdder", "EasternBrownSnake", "IndianTaipan", "LowlandCopperhead", "MulgaSnake", "RedBelliedBlackSnake", "SpottedPython", "SutaSuta", "TigerSnake", "WesternBrownSnake", "BlackHeadedPython", "BandyBandy"]
 
     var snakes: [Snake] = []
-    var flag = false
+    var snake: Snake? = nil
     
-    func InitSnakes() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         txts.sort()
         for txt in txts {
             let file = Bundle.main.path(forResource: txt, ofType: "json")
@@ -37,20 +39,20 @@ class ViewController: UIViewController {
                 print(error)
             }
         }
-        flag = true
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if !flag {
-            InitSnakes()
-        }
+        
         table_view.delegate = self
         table_view.dataSource = self
     }
     
     @IBAction func OnCameraButtonTouchUpInside(_ sender: Any) {
         performSegue(withIdentifier: "CameraSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DisplaySegue" {
+            let display_view = segue.destination as! DisplayViewController
+            display_view.snake = self.snake
+        }
     }
 }
 
@@ -64,6 +66,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
         cell.SetLabelName(name: name)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.snake = snakes[indexPath.row]
+        performSegue(withIdentifier: "DisplaySegue", sender: nil)
     }
 }
 

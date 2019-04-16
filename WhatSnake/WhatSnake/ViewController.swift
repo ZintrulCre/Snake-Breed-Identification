@@ -8,25 +8,43 @@
 
 import UIKit
 
+struct Snake: Decodable{
+    var name: String
+    var venomous: Bool
+    var distribution: String
+    var description: String
+}
+
 class ViewController: UIViewController {
     @IBOutlet weak var table_view: UITableView!
+
+    var txts: [String] =  ["CarpetPython", "CoastalTaipan", "CommonDeathAdder", "EasternBrownSnake", "IndianTaipan", "LowlandCopperhead", "MulgaSnake", "RedBelliedBlackSnake", "SpottedPython", "SutaSuta", "TigerSnake", "WesternBrownSnake", "BlackHeadedPython", "BandyBandy"]
+
+    var snakes: [Snake] = []
+    var flag = false
     
-    var txts: [String] =  ["CarpetPython", "CoastalTaipan", "CommonDeathAdder", "EasternBrownSnake", "IndianTaipan", "LowlandCopperhead", "MilkSnake", "MulgaSnake", "RedBelliedBlackSnake", "SpottedPython", "SutaSuta", "TigerSnake", "WesternBrownSnake", "BlackHeadedPython", "BandyBandy"]
-    var snake_names: [String] =  ["Carpet Python", "Coastal Taipan", "Common Death Adder", "Eastern BrownSnake", "Indian Taipan", "Lowerland Copperhead", "Milk Snake", "Mulga Snake", "Red-Bellied Black Snake", "Spotted Python", "Suta Suta", "Tiger Snake", "Western Brown Snake", "Black-Headed Python", "Bandy Bandy"]
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func InitSnakes() {
+        txts.sort()
         for txt in txts {
-            let file = Bundle.main.path(forResource: txt, ofType: "txt")
+            let file = Bundle.main.path(forResource: txt, ofType: "json")
             do {
                 let content = try String(contentsOfFile: file!, encoding: String.Encoding.utf8)
-                print(content)
+                let data = content.data(using: .utf8)!
+                let snake = try JSONDecoder().decode(Snake.self, from: data)
+                print(snake.name)
+                snakes.append(snake)
             } catch let error as NSError {
                 print(error)
             }
         }
-        
-        
+        flag = true
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if !flag {
+            InitSnakes()
+        }
         table_view.delegate = self
         table_view.dataSource = self
     }
@@ -38,11 +56,11 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.snake_names.count
+        return self.snakes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let name = self.snake_names[indexPath.row]
+        let name = self.snakes[indexPath.row].name
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
         cell.SetLabelName(name: name)
         return cell

@@ -422,7 +422,7 @@
                         <outlet property="info_text" destination="HY6-MV-X89" id="uZH-g2-EsS"/>
                         <outlet property="type_name" destination="mY6-IM-zhF" id="Dfw-l1-aEo"/>
                         <outlet property="venomous" destination="Yjm-2k-bMZ" id="yK6-qr-Qgs"/>
-                        <segue destination="cPT-Nc-BtY" kind="presentation" identifier="IdentificationReturnSegue" id="Y1k-ti-3uJ"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="IdentificationReturnSegue" id="ctT-ZP-nwG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wzn-Ua-wlb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -439,6 +439,7 @@
         <image name="Save.png" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Y1k-ti-3uJ"/>
+        <segue reference="CGO-lS-jBK"/>
+        <segue reference="ctT-ZP-nwG"/>
     </inferredMetricsTieBreakers>
 </document>

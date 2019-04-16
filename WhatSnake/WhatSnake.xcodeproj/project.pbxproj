@@ -129,6 +129,7 @@
 		990E732C2261DA3D00372CD2 /* Text */ = {
 			isa = PBXGroup;
 			children = (
+				990A15E42262B68900970ED5 /* CarpetPython.txt */,
 				990A15E92262B68900970ED5 /* CoastalTaipan.txt */,
 				990A15E12262B68900970ED5 /* CommonDeathAdder.txt */,
 				990A15E02262B68900970ED5 /* EasternBrownSnake.txt */,
@@ -195,7 +196,6 @@
 		99DB7EE5225229CE005B44E8 /* WhatSnake */ = {
 			isa = PBXGroup;
 			children = (
-				990A15E42262B68900970ED5 /* CarpetPython.txt */,
 				99DB7EE6225229CE005B44E8 /* AppDelegate.swift */,
 				99DB7EE8225229CE005B44E8 /* ViewController.swift */,
 				99DB7F1422522FBB005B44E8 /* CameraViewController.swift */,

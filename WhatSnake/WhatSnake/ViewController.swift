@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var table_view: UITableView!
     
-    var txts: [String] =  ["CarpetPython", "CoastalTaipan", "CommonDeathAdder", "EasternBrownSnake", "IndianTaipan", "LowerlandCopperhead", "MilkSnake", "MulgaSnake", "RedBelliedBlackSnake", "SpottedPython", "SutaSuta", "TigerSnake", "WesternBrownSnake", "BlackHeadedPython", "BandyBandy"]
+    var txts: [String] =  ["CarpetPython", "CoastalTaipan", "CommonDeathAdder", "EasternBrownSnake", "IndianTaipan", "LowlandCopperhead", "MilkSnake", "MulgaSnake", "RedBelliedBlackSnake", "SpottedPython", "SutaSuta", "TigerSnake", "WesternBrownSnake", "BlackHeadedPython", "BandyBandy"]
     var snake_names: [String] =  ["Carpet Python", "Coastal Taipan", "Common Death Adder", "Eastern BrownSnake", "Indian Taipan", "Lowerland Copperhead", "Milk Snake", "Mulga Snake", "Red-Bellied Black Snake", "Spotted Python", "Suta Suta", "Tiger Snake", "Western Brown Snake", "Black-Headed Python", "Bandy Bandy"]
     
     override func viewDidLoad() {

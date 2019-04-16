@@ -274,37 +274,37 @@
                                 <rect key="frame" x="241" y="28" width="165" height="406"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8P-sm-T1G">
-                                        <rect key="frame" x="61.666666666666686" y="48" width="42" height="24"/>
+                                        <rect key="frame" x="61.666666666666686" y="96" width="42" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.65098039220000004" green="0.54117647059999996" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TypeName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mY6-IM-zhF">
-                                        <rect key="frame" x="26.999999999999993" y="80" width="111.33333333333331" height="28.666666666666671"/>
+                                        <rect key="frame" x="26.999999999999993" y="128" width="111.33333333333331" height="28.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.65098039220000004" green="0.54117647059999996" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R55-bJ-sTa">
-                                        <rect key="frame" x="52.333333333333314" y="124.66666666666666" width="60.666666666666657" height="24"/>
+                                        <rect key="frame" x="52.333333333333314" y="172.66666666666666" width="60.666666666666657" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.65098039220000004" green="0.54117647059999996" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venomous" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yjm-2k-bMZ">
-                                        <rect key="frame" x="27.666666666666686" y="156.66666666666666" width="110" height="28.666666666666657"/>
+                                        <rect key="frame" x="27.666666666666686" y="204.66666666666666" width="110" height="28.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.65098039220000004" green="0.54117647059999996" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfS-he-MA0">
-                                        <rect key="frame" x="62.333333333333314" y="201.33333333333334" width="40.333333333333343" height="24"/>
+                                        <rect key="frame" x="62.333333333333314" y="249.33333333333331" width="40.333333333333343" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.65098039220000004" green="0.54117647059999996" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distribution" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHi-N3-QmK">
-                                        <rect key="frame" x="22.666666666666693" y="233.33333333333331" width="119.66666666666669" height="28.666666666666686"/>
+                                        <rect key="frame" x="22.666666666666693" y="281.33333333333331" width="119.66666666666669" height="28.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.65098039220000004" green="0.54117647059999996" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -313,7 +313,7 @@
                                 <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="R55-bJ-sTa" firstAttribute="top" secondItem="mY6-IM-zhF" secondAttribute="bottom" constant="16" id="COD-Sj-KYJ"/>
-                                    <constraint firstItem="L8P-sm-T1G" firstAttribute="top" secondItem="qhj-rk-lj9" secondAttribute="top" constant="48" id="CSl-OD-VGl"/>
+                                    <constraint firstItem="L8P-sm-T1G" firstAttribute="top" secondItem="qhj-rk-lj9" secondAttribute="top" constant="96" id="CSl-OD-VGl"/>
                                     <constraint firstItem="nHi-N3-QmK" firstAttribute="top" secondItem="EfS-he-MA0" secondAttribute="bottom" constant="8" id="LMf-BN-6bn"/>
                                     <constraint firstItem="Yjm-2k-bMZ" firstAttribute="top" secondItem="R55-bJ-sTa" secondAttribute="bottom" constant="8" id="LlF-s0-ugA"/>
                                     <constraint firstItem="Yjm-2k-bMZ" firstAttribute="centerX" secondItem="qhj-rk-lj9" secondAttribute="centerX" id="ViP-rR-edC"/>
@@ -439,6 +439,6 @@
         <image name="Save.png" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CGO-lS-jBK"/>
+        <segue reference="Y1k-ti-3uJ"/>
     </inferredMetricsTieBreakers>
 </document>

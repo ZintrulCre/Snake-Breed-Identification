@@ -11,11 +11,22 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var table_view: UITableView!
     
-    var snake_names: [String] = ["Carpet Python", "Coastal Taipan", "Common Death Adder", "Eastern Brown Snake", "Indian Taipan", "Lowerland Copperhead", "Milk Snake", "Mulga Snake", "Red-Bellied Black Snake", "Spotted Python", "Suta Suta", "Tiger Snake", "Western Brown Snake", "Black-Headed Python", "Bandy Bandy"]
-    
+    var txts: [String] =  ["CarpetPython", "CoastalTaipan", "CommonDeathAdder", "EasternBrownSnake", "IndianTaipan", "LowerlandCopperhead", "MilkSnake", "MulgaSnake", "RedBelliedBlackSnake", "SpottedPython", "SutaSuta", "TigerSnake", "WesternBrownSnake", "BlackHeadedPython", "BandyBandy"]
+    var snake_names: [String] =  ["Carpet Python", "Coastal Taipan", "Common Death Adder", "Eastern BrownSnake", "Indian Taipan", "Lowerland Copperhead", "Milk Snake", "Mulga Snake", "Red-Bellied Black Snake", "Spotted Python", "Suta Suta", "Tiger Snake", "Western Brown Snake", "Black-Headed Python", "Bandy Bandy"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        for txt in txts {
+            let file = Bundle.main.path(forResource: txt, ofType: "txt")
+            do {
+                let content = try String(contentsOfFile: file!, encoding: String.Encoding.utf8)
+                print(content)
+            } catch let error as NSError {
+                print(error)
+            }
+        }
+        
+        
         table_view.delegate = self
         table_view.dataSource = self
     }

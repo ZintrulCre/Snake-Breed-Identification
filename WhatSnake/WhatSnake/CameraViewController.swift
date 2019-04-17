@@ -32,7 +32,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction fileprivate func OnImportButtonTouchUpInside(_ sender: Any) {
         let image_picker = UIImagePickerController()
         image_picker.sourceType = UIImagePickerController.SourceType.photoLibrary
-        image_picker.allowsEditing = true
+//        image_picker.allowsEditing = true
         image_picker.delegate = self
         self.present(image_picker, animated: true)
     }

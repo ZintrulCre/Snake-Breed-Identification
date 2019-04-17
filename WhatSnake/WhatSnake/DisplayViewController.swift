@@ -35,15 +35,25 @@ class DisplayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         image_view.image = self.image
+        SetText()
+    }
+    
+    func SetText() {
         if self.snake != nil {
+            self.type_name.contentMode = .scaleToFill
+            self.type_name.numberOfLines = 0
             self.type_name.text = self.snake?.name
+            
+            self.venomous.lineBreakMode = NSLineBreakMode.byWordWrapping
             self.venomous.text = self.snake!.venomous ? "venomous" : "non-venomous"
+            self.venomous.textColor = self.snake!.venomous ? UIColor(red: 0.92, green: 0.09, blue: 0.13, alpha: 1):UIColor(red: 0.09, green: 0.61, blue: 0.64, alpha: 1)
+            
+            self.distribution.lineBreakMode = NSLineBreakMode.byWordWrapping
             self.distribution.text = self.snake?.distribution
+            
             self.info.text = self.snake?.description
         }
     }
-    
-
     /*
     // MARK: - Navigation
 

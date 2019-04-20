@@ -1,2 +1,2 @@
-WhatSnake/VGG16.mlmodel
-WhatSnake/Resnet50.mlmodel
+WhatSnake/Models
+.DS_Store

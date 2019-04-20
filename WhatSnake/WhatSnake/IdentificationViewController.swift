@@ -30,7 +30,7 @@ class IdentificationViewController: UIViewController {
             fatalError("Can't convert UIImage to CIImage")
         }
         
-        guard let model = try?VNCoreMLModel(for: Resnet50().model) else {
+        guard let model = try?VNCoreMLModel(for: MobileNet().model) else {
             fatalError("Can't load the CoreML model")
         }
         

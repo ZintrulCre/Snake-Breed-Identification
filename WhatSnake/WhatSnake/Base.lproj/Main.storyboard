@@ -113,10 +113,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0Q-RL-j89">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PER-Nd-P53">
                                 <rect key="frame" x="32" y="656" width="48" height="48"/>
                                 <constraints>
@@ -125,7 +121,9 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="Xz1-1N-gfm"/>
                                     <constraint firstAttribute="height" constant="48" id="ZdL-AF-INr"/>
                                 </constraints>
-                                <state key="normal" title="Import"/>
+                                <state key="normal" title="Import">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="30"/>
@@ -152,7 +150,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tat-0V-gOk">
-                                <rect key="frame" x="334" y="52" width="48" height="48"/>
+                                <rect key="frame" x="334" y="656" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="3ms-hm-qoS"/>
                                     <constraint firstAttribute="width" constant="48" id="86K-ov-uus"/>
@@ -187,26 +185,39 @@
                                     <action selector="OnCaptureButtonTouchUpInside:" destination="cPT-Nc-BtY" eventType="touchUpInside" id="XpC-R4-A5q"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcv-iE-7Rc" userLabel="identifier">
+                                <rect key="frame" x="112" y="52" width="41.666666666666664" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0L-IO-jdY" userLabel="confidence">
+                                <rect key="frame" x="112" y="72.333333333333329" width="41.666666666666664" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Z0L-IO-jdY" firstAttribute="top" secondItem="jcv-iE-7Rc" secondAttribute="bottom" id="7r9-zp-yVG"/>
                             <constraint firstItem="a9K-s7-iNB" firstAttribute="bottom" secondItem="kzJ-J8-Cka" secondAttribute="bottom" constant="32" id="AIO-qA-HXS"/>
                             <constraint firstItem="a9K-s7-iNB" firstAttribute="trailing" secondItem="Tat-0V-gOk" secondAttribute="trailing" constant="32" id="Coq-8W-b57"/>
                             <constraint firstItem="hD2-c1-gdD" firstAttribute="leading" secondItem="a9K-s7-iNB" secondAttribute="leading" constant="32" id="FSa-6m-Xcc"/>
-                            <constraint firstItem="B0Q-RL-j89" firstAttribute="top" secondItem="4ID-Aw-Jdu" secondAttribute="top" id="K7W-Yh-p5H"/>
+                            <constraint firstItem="Z0L-IO-jdY" firstAttribute="leading" secondItem="hD2-c1-gdD" secondAttribute="trailing" constant="32" id="JZg-ME-Otr"/>
+                            <constraint firstItem="a9K-s7-iNB" firstAttribute="bottom" secondItem="Tat-0V-gOk" secondAttribute="bottom" constant="32" id="UeJ-en-a3D"/>
                             <constraint firstItem="a9K-s7-iNB" firstAttribute="bottom" secondItem="PER-Nd-P53" secondAttribute="bottom" constant="32" id="ZvN-Ct-mpw"/>
+                            <constraint firstItem="jcv-iE-7Rc" firstAttribute="top" secondItem="a9K-s7-iNB" secondAttribute="top" constant="32" id="aFN-L7-rE0"/>
+                            <constraint firstItem="jcv-iE-7Rc" firstAttribute="leading" secondItem="hD2-c1-gdD" secondAttribute="trailing" constant="32" id="dZe-ag-btI"/>
                             <constraint firstItem="kzJ-J8-Cka" firstAttribute="centerX" secondItem="4ID-Aw-Jdu" secondAttribute="centerX" id="gN9-gp-eMp"/>
-                            <constraint firstItem="B0Q-RL-j89" firstAttribute="trailing" secondItem="a9K-s7-iNB" secondAttribute="trailing" id="h3D-hG-UD2"/>
-                            <constraint firstItem="B0Q-RL-j89" firstAttribute="leading" secondItem="a9K-s7-iNB" secondAttribute="leading" id="m3J-B4-tZB"/>
-                            <constraint firstItem="Tat-0V-gOk" firstAttribute="top" secondItem="a9K-s7-iNB" secondAttribute="top" constant="32" id="meg-ep-s2O"/>
                             <constraint firstItem="hD2-c1-gdD" firstAttribute="top" secondItem="a9K-s7-iNB" secondAttribute="top" constant="32" id="n0U-gi-fxi"/>
-                            <constraint firstItem="B0Q-RL-j89" firstAttribute="bottom" secondItem="a9K-s7-iNB" secondAttribute="bottom" id="xTr-t2-hpU"/>
                             <constraint firstItem="PER-Nd-P53" firstAttribute="leading" secondItem="a9K-s7-iNB" secondAttribute="leading" constant="32" id="z8a-rO-5AC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a9K-s7-iNB"/>
                     </view>
                     <connections>
-                        <outlet property="camera_view" destination="B0Q-RL-j89" id="zER-8S-kiP"/>
+                        <outlet property="confidence" destination="Z0L-IO-jdY" id="ebM-1Y-wr6"/>
+                        <outlet property="identifier" destination="jcv-iE-7Rc" id="E1Z-8R-soO"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="CameraReturnSegue" id="fZ5-3t-KBq"/>
                         <segue destination="dfD-5z-PTM" kind="presentation" identifier="IdentificationSegue" id="aO2-T6-nqH"/>
                     </connections>
@@ -465,6 +476,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="VL1-Ef-KSg"/>
         <segue reference="CGO-lS-jBK"/>
-        <segue reference="ctT-ZP-nwG"/>
+        <segue reference="fZ5-3t-KBq"/>
     </inferredMetricsTieBreakers>
 </document>

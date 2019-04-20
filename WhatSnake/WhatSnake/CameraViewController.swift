@@ -7,16 +7,20 @@
 //
 
 import UIKit
+import Vision
 import AVFoundation
 
-class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate {
     var capture_session: AVCaptureSession?
     var capture_device: AVCaptureDevice?
     var back_camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
     var front_camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front)
     var photo_output: AVCapturePhotoOutput?
-    var capture_preview_layer: AVCaptureVideoPreviewLayer?
     var image:UIImage?
+    
+    @IBOutlet weak var identifier: UILabel!
+    @IBOutlet weak var confidence: UILabel!
+    
     
     @IBOutlet weak var camera_view: UIView!
     
@@ -66,26 +70,50 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         do {
 //            initialize session and device
             capture_session = AVCaptureSession()
-            capture_device = (capture_device == nil || capture_device!.position == .front) ? back_camera : front_camera
+            capture_session?.sessionPreset = .photo
             
-//            initialize input and output
+//            initialize input
+            capture_device = (capture_device == nil || capture_device!.position == .front) ? back_camera : front_camera
             let capture_input = try AVCaptureDeviceInput(device: capture_device!)
             capture_session?.addInput(capture_input)
+            
+//            initialize output
             photo_output = AVCapturePhotoOutput()
             photo_output?.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])], completionHandler: nil)
             capture_session?.addOutput(photo_output!)
             
 //            initialize layer
-            capture_preview_layer = AVCaptureVideoPreviewLayer(session: capture_session!)
-            capture_preview_layer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-            capture_preview_layer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
-            capture_preview_layer?.frame = camera_view.frame
-            camera_view.layer.addSublayer(capture_preview_layer!)
+            let capture_preview_layer = AVCaptureVideoPreviewLayer(session: capture_session!)
+//            capture_preview_layer!.videoGravity = AVLayerVideoGravity.resizeAspectFill
+//            capture_preview_layer!.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
+            view.layer.addSublayer(capture_preview_layer)
+            capture_preview_layer.frame = view.frame
             
+//            video output
+            let data_output = AVCaptureVideoDataOutput()
+            data_output.setSampleBufferDelegate(self, queue: DispatchQueue(label: "video_queue"))
+            capture_session?.addOutput(data_output)
+            
+//            start running
             capture_session?.startRunning()
         } catch {
             print(error)
         }
+    }
+    
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        guard let pixel_buffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)! else {return}
+        guard let model = try? VNCoreMLModel(for: Resnet50().model) else {return}
+        let request = VNCoreMLRequest(model: model) {
+            (finished_request, err) in
+            guard let result = finished_request.results as? [VNClassificationObservation] else {return}
+            let most_confident = result.first
+            DispatchQueue.main.async {
+                self.identifier.text = most_confident?.identifier
+                self.confidence.text = String(describing: (most_confident?.confidence))
+            }
+        }
+        try? VNImageRequestHandler(cvPixelBuffer: pixel_buffer, options: [:]).perform([request])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

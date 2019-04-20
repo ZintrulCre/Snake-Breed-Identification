@@ -14,6 +14,7 @@
 		99496E4A225D7E45003913F1 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 99496E45225D7E45003913F1 /* Back.png */; };
 		99496E4B225D7E45003913F1 /* Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 99496E46225D7E45003913F1 /* Circle.png */; };
 		99496E4C225D7E45003913F1 /* Close.png in Resources */ = {isa = PBXBuildFile; fileRef = 99496E47225D7E45003913F1 /* Close.png */; };
+		994CCB05226971B3000B2E7C /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 994CCB04226971B3000B2E7C /* Resnet50.mlmodel */; };
 		9974619A22649F0C00CE4903 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9974619922649F0C00CE4903 /* DisplayViewController.swift */; };
 		997461A922658BD600CE4903 /* SpottedPython.json in Resources */ = {isa = PBXBuildFile; fileRef = 9974619B22658BD500CE4903 /* SpottedPython.json */; };
 		997461AA22658BD600CE4903 /* BlackHeadedPython.json in Resources */ = {isa = PBXBuildFile; fileRef = 9974619C22658BD500CE4903 /* BlackHeadedPython.json */; };
@@ -31,7 +32,6 @@
 		997461B622658BD600CE4903 /* CommonDeathAdder.json in Resources */ = {isa = PBXBuildFile; fileRef = 997461A822658BD600CE4903 /* CommonDeathAdder.json */; };
 		997461B822658C6D00CE4903 /* Snake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997461B722658C6D00CE4903 /* Snake.swift */; };
 		9997377C2253080900566EB0 /* IdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997377B2253080900566EB0 /* IdentificationViewController.swift */; };
-		9997378222530BAD00566EB0 /* VGG16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9997378122530BAD00566EB0 /* VGG16.mlmodel */; };
 		99DB7EE7225229CE005B44E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB7EE6225229CE005B44E8 /* AppDelegate.swift */; };
 		99DB7EE9225229CE005B44E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB7EE8225229CE005B44E8 /* ViewController.swift */; };
 		99DB7EEC225229CE005B44E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99DB7EEA225229CE005B44E8 /* Main.storyboard */; };
@@ -67,6 +67,7 @@
 		99496E45225D7E45003913F1 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
 		99496E46225D7E45003913F1 /* Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Circle.png; sourceTree = "<group>"; };
 		99496E47225D7E45003913F1 /* Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Close.png; sourceTree = "<group>"; };
+		994CCB04226971B3000B2E7C /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		9974619922649F0C00CE4903 /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		9974619B22658BD500CE4903 /* SpottedPython.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpottedPython.json; sourceTree = "<group>"; };
 		9974619C22658BD500CE4903 /* BlackHeadedPython.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BlackHeadedPython.json; sourceTree = "<group>"; };
@@ -84,7 +85,6 @@
 		997461A822658BD600CE4903 /* CommonDeathAdder.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CommonDeathAdder.json; sourceTree = "<group>"; };
 		997461B722658C6D00CE4903 /* Snake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snake.swift; sourceTree = "<group>"; };
 		9997377B2253080900566EB0 /* IdentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificationViewController.swift; sourceTree = "<group>"; };
-		9997378122530BAD00566EB0 /* VGG16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = VGG16.mlmodel; sourceTree = "<group>"; };
 		99DB7EE3225229CE005B44E8 /* WhatSnake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatSnake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DB7EE6225229CE005B44E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99DB7EE8225229CE005B44E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 		9997378022530B8900566EB0 /* CoreMLModel */ = {
 			isa = PBXGroup;
 			children = (
-				9997378122530BAD00566EB0 /* VGG16.mlmodel */,
+				994CCB04226971B3000B2E7C /* Resnet50.mlmodel */,
 			);
 			name = CoreMLModel;
 			sourceTree = "<group>";
@@ -385,7 +385,7 @@
 				9997377C2253080900566EB0 /* IdentificationViewController.swift in Sources */,
 				99DB7F1522522FBB005B44E8 /* CameraViewController.swift in Sources */,
 				997461B822658C6D00CE4903 /* Snake.swift in Sources */,
-				9997378222530BAD00566EB0 /* VGG16.mlmodel in Sources */,
+				994CCB05226971B3000B2E7C /* Resnet50.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

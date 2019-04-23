@@ -11,6 +11,7 @@
 		990A15FF2262C9BA00970ED5 /* Camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 990A15FE2262C9BA00970ED5 /* Camera.png */; };
 		990A16012262CAB500970ED5 /* Change.png in Resources */ = {isa = PBXBuildFile; fileRef = 990A16002262CAB500970ED5 /* Change.png */; };
 		990D90D6226AF75C0052E56E /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 990D90D5226AF75C0052E56E /* MobileNet.mlmodel */; };
+		9933D5D7226ED2A000D7D734 /* DetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933D5D6226ED2A000D7D734 /* DetectionViewController.swift */; };
 		99496E49225D7E45003913F1 /* Save.png in Resources */ = {isa = PBXBuildFile; fileRef = 99496E44225D7E45003913F1 /* Save.png */; };
 		99496E4A225D7E45003913F1 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 99496E45225D7E45003913F1 /* Back.png */; };
 		99496E4B225D7E45003913F1 /* Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 99496E46225D7E45003913F1 /* Circle.png */; };
@@ -71,6 +72,7 @@
 		990A15FE2262C9BA00970ED5 /* Camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Camera.png; sourceTree = "<group>"; };
 		990A16002262CAB500970ED5 /* Change.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Change.png; sourceTree = "<group>"; };
 		990D90D5226AF75C0052E56E /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MobileNet.mlmodel; path = Models/MobileNet.mlmodel; sourceTree = "<group>"; };
+		9933D5D6226ED2A000D7D734 /* DetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionViewController.swift; sourceTree = "<group>"; };
 		99496E44225D7E45003913F1 /* Save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Save.png; sourceTree = "<group>"; };
 		99496E45225D7E45003913F1 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
 		99496E46225D7E45003913F1 /* Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Circle.png; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				99DB7EE6225229CE005B44E8 /* AppDelegate.swift */,
 				99DB7EE8225229CE005B44E8 /* ViewController.swift */,
 				99DB7F1422522FBB005B44E8 /* CameraViewController.swift */,
+				9933D5D6226ED2A000D7D734 /* DetectionViewController.swift */,
 				9997377B2253080900566EB0 /* IdentificationViewController.swift */,
 				9974619922649F0C00CE4903 /* DisplayViewController.swift */,
 				99DB7EEA225229CE005B44E8 /* Main.storyboard */,
@@ -409,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99F403CC226AFF61005473A6 /* YOLO.swift in Sources */,
+				9933D5D7226ED2A000D7D734 /* DetectionViewController.swift in Sources */,
 				99DB7EE9225229CE005B44E8 /* ViewController.swift in Sources */,
 				9974619A22649F0C00CE4903 /* DisplayViewController.swift in Sources */,
 				99F403C8226AFF1B005473A6 /* CVPixelBuffer-UIImage.swift in Sources */,

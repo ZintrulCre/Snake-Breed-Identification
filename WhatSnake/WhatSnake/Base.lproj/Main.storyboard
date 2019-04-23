@@ -18,35 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZp-nV-Tga">
-                                <rect key="frame" x="0.0" y="672" width="414" height="64"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4l-sy-lzN">
-                                        <rect key="frame" x="183" y="8" width="48" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="4nN-vN-ZN4"/>
-                                            <constraint firstAttribute="width" constant="48" id="rXT-Vz-OXu"/>
-                                        </constraints>
-                                        <state key="normal" image="Camera.png" backgroundImage="Camera.png">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="OnCameraButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ujD-Bj-VR3"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="I4l-sy-lzN" firstAttribute="centerY" secondItem="vZp-nV-Tga" secondAttribute="centerY" id="BTV-Je-Cab"/>
-                                    <constraint firstAttribute="height" constant="64" id="dXW-Mi-QeR"/>
-                                    <constraint firstItem="I4l-sy-lzN" firstAttribute="centerX" secondItem="vZp-nV-Tga" secondAttribute="centerX" id="f6Z-D3-61A"/>
-                                </constraints>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DSf-DP-qZh">
                                 <rect key="frame" x="0.0" y="116" width="414" height="556"/>
                                 <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,14 +53,66 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZp-nV-Tga">
+                                <rect key="frame" x="143" y="672" width="128" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4l-sy-lzN" userLabel="IdentificationButton">
+                                        <rect key="frame" x="80" y="8" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="4nN-vN-ZN4"/>
+                                            <constraint firstAttribute="width" constant="48" id="rXT-Vz-OXu"/>
+                                        </constraints>
+                                        <state key="normal" image="Camera.png" backgroundImage="Camera.png">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="OnCameraButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ujD-Bj-VR3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f79-yG-Jzf" userLabel="DetectionButton">
+                                        <rect key="frame" x="0.0" y="8" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="cgx-5y-hDJ"/>
+                                            <constraint firstAttribute="height" constant="48" id="kvr-e4-Nv1"/>
+                                        </constraints>
+                                        <state key="normal" image="Camera.png" backgroundImage="Camera.png">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="OnDetectionButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hTc-wN-d4r"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="20a-f2-txl"/>
+                                    <constraint firstItem="I4l-sy-lzN" firstAttribute="top" secondItem="vZp-nV-Tga" secondAttribute="top" constant="8" id="Gh5-BV-8dM"/>
+                                    <constraint firstAttribute="height" constant="64" id="dXW-Mi-QeR"/>
+                                    <constraint firstAttribute="bottom" secondItem="I4l-sy-lzN" secondAttribute="bottom" constant="8" id="eQb-qo-iro"/>
+                                    <constraint firstAttribute="trailing" secondItem="I4l-sy-lzN" secondAttribute="trailing" id="gGM-1b-hCL"/>
+                                    <constraint firstItem="f79-yG-Jzf" firstAttribute="leading" secondItem="vZp-nV-Tga" secondAttribute="leading" id="q59-dY-q5k"/>
+                                    <constraint firstItem="f79-yG-Jzf" firstAttribute="top" secondItem="vZp-nV-Tga" secondAttribute="top" constant="8" id="w7C-tq-jui"/>
+                                    <constraint firstAttribute="bottom" secondItem="f79-yG-Jzf" secondAttribute="bottom" constant="8" id="yzA-NA-2IG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vZp-nV-Tga" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EdT-lZ-Y9G"/>
-                            <constraint firstItem="vZp-nV-Tga" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="N1J-YW-yFt"/>
+                            <constraint firstItem="vZp-nV-Tga" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IhS-BO-L0l"/>
                             <constraint firstItem="DSf-DP-qZh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Oig-ma-our"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DSf-DP-qZh" secondAttribute="trailing" id="aow-wl-S0e"/>
                             <constraint firstItem="vZp-nV-Tga" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="d0W-3Z-MFF"/>
+                            <constraint firstItem="vZp-nV-Tga" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gue-aF-5lV"/>
+                            <constraint firstItem="DSf-DP-qZh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="i5g-8Z-XNg"/>
                             <constraint firstItem="vZp-nV-Tga" firstAttribute="top" secondItem="DSf-DP-qZh" secondAttribute="bottom" id="qzi-MC-dMs"/>
                             <constraint firstItem="DSf-DP-qZh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="sXi-e9-f06"/>
                         </constraints>
@@ -99,11 +122,49 @@
                         <outlet property="table_view" destination="DSf-DP-qZh" id="wDb-cf-bdn"/>
                         <segue destination="cPT-Nc-BtY" kind="presentation" identifier="CameraSegue" id="CGO-lS-jBK"/>
                         <segue destination="Acz-yJ-xAc" kind="presentation" identifier="DisplaySegue" id="VL1-Ef-KSg"/>
+                        <segue destination="sbd-ev-Xzq" kind="presentation" identifier="DetectionSegue" id="sgQ-e7-4iU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.58695652173915"/>
+        </scene>
+        <!--Detection View Controller-->
+        <scene sceneID="Thm-j7-TIG">
+            <objects>
+                <viewController id="sbd-ev-Xzq" customClass="DetectionViewController" customModule="WhatSnake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rab-x6-JGd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDZ-U7-3D8" userLabel="Return">
+                                <rect key="frame" x="32" y="52" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="aBY-lr-YM7"/>
+                                    <constraint firstAttribute="width" constant="48" id="n8M-hA-MtA"/>
+                                </constraints>
+                                <state key="normal" title="Return" image="Back.png"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="OnReturnButtonTouchUpInside:" destination="sbd-ev-Xzq" eventType="touchUpInside" id="J0a-Fc-vvE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lDZ-U7-3D8" firstAttribute="top" secondItem="aC4-xK-Qau" secondAttribute="top" constant="32" id="CNv-Bk-ASG"/>
+                            <constraint firstItem="lDZ-U7-3D8" firstAttribute="leading" secondItem="aC4-xK-Qau" secondAttribute="leading" constant="32" id="RfB-xi-sHy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aC4-xK-Qau"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zN-ow-LjP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807" y="-550"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="33b-9A-ji7">

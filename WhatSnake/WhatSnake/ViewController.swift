@@ -44,6 +44,10 @@ class ViewController: UIViewController {
         table_view.dataSource = self
     }
     
+    @IBAction func OnDetectionButtonTouchUpInside(_ sender: Any) {
+        performSegue(withIdentifier: "DetectionSegue", sender: nil)
+    }
+    
     @IBAction func OnCameraButtonTouchUpInside(_ sender: Any) {
         performSegue(withIdentifier: "CameraSegue", sender: nil)
     }

@@ -42,6 +42,6 @@ The iOS application is in the folder *WhatSnake*.
 
 <img src='Demo/Detection.png'>
 
-### Process
+### Video
 
 [Snake Breed Identification 20190502](https://www.youtube.com/watch?v=rGudAFElZk4&feature=youtu.be)

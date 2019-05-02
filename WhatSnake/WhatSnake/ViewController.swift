@@ -69,6 +69,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let name = self.snakes[indexPath.row].name
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
         cell.SetLabelName(name: name)
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         return cell
     }
     

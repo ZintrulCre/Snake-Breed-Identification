@@ -162,7 +162,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDZ-U7-3D8" userLabel="Return">
-                                <rect key="frame" x="32" y="52" width="48" height="48"/>
+                                <rect key="frame" x="24" y="44" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="aBY-lr-YM7"/>
                                     <constraint firstAttribute="width" constant="48" id="n8M-hA-MtA"/>
@@ -180,11 +180,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lDZ-U7-3D8" firstAttribute="top" secondItem="aC4-xK-Qau" secondAttribute="top" constant="32" id="CNv-Bk-ASG"/>
-                            <constraint firstItem="lDZ-U7-3D8" firstAttribute="leading" secondItem="aC4-xK-Qau" secondAttribute="leading" constant="32" id="RfB-xi-sHy"/>
+                            <constraint firstItem="lDZ-U7-3D8" firstAttribute="top" secondItem="aC4-xK-Qau" secondAttribute="top" constant="24" id="CNv-Bk-ASG"/>
+                            <constraint firstItem="lDZ-U7-3D8" firstAttribute="leading" secondItem="aC4-xK-Qau" secondAttribute="leading" constant="24" id="RfB-xi-sHy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aC4-xK-Qau"/>
                     </view>
+                    <connections>
+                        <outlet property="return_button" destination="lDZ-U7-3D8" id="d9O-1e-grt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zN-ow-LjP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -309,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P8c-Au-3gI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807.24637681159425" y="138.58695652173915"/>
+            <point key="canvasLocation" x="806" y="157"/>
         </scene>
         <!--Identification View Controller-->
         <scene sceneID="MpY-XY-InT">
@@ -557,6 +560,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VL1-Ef-KSg"/>
-        <segue reference="CGO-lS-jBK"/>
+        <segue reference="rUX-Xf-Wkx"/>
     </inferredMetricsTieBreakers>
 </document>

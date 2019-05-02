@@ -43,6 +43,8 @@ class DetectionViewController: UIViewController {
         return view
     }()
     
+    @IBOutlet weak var return_button: UIButton!
+    
     @IBAction func OnReturnButtonTouchUpInside(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -52,8 +54,10 @@ class DetectionViewController: UIViewController {
         timeLabel.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - self.labelHeight, width: UIScreen.main.bounds.size.width, height: self.labelHeight)
         videoPreview.frame = self.view.frame
         
-        view.addSubview(timeLabel)
+//        view.addSubview(timeLabel)
         view.addSubview(videoPreview)
+        view.addSubview(return_button)
+        
         
         timeLabel.text = ""
         
@@ -129,10 +133,10 @@ class DetectionViewController: UIViewController {
         return .lightContent
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        resizePreviewLayer()
-    }
+//    override func viewWillLayoutSubviews() {
+//        super.viewWillLayoutSubviews()
+//        resizePreviewLayer()
+//    }
     
     func resizePreviewLayer() {
         videoCapture.previewLayer?.frame = videoPreview.bounds

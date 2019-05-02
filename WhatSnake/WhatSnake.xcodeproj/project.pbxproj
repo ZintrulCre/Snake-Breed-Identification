@@ -32,6 +32,8 @@
 		997461B522658BD600CE4903 /* TigerSnake.json in Resources */ = {isa = PBXBuildFile; fileRef = 997461A722658BD600CE4903 /* TigerSnake.json */; };
 		997461B622658BD600CE4903 /* CommonDeathAdder.json in Resources */ = {isa = PBXBuildFile; fileRef = 997461A822658BD600CE4903 /* CommonDeathAdder.json */; };
 		997461B822658C6D00CE4903 /* Snake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997461B722658C6D00CE4903 /* Snake.swift */; };
+		9974D420227AF93700998A88 /* Identification.png in Resources */ = {isa = PBXBuildFile; fileRef = 9974D41E227AF93600998A88 /* Identification.png */; };
+		9974D421227AF93700998A88 /* Detection.png in Resources */ = {isa = PBXBuildFile; fileRef = 9974D41F227AF93700998A88 /* Detection.png */; };
 		9997377C2253080900566EB0 /* IdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997377B2253080900566EB0 /* IdentificationViewController.swift */; };
 		99DB7EE7225229CE005B44E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB7EE6225229CE005B44E8 /* AppDelegate.swift */; };
 		99DB7EE9225229CE005B44E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB7EE8225229CE005B44E8 /* ViewController.swift */; };
@@ -93,6 +95,8 @@
 		997461A722658BD600CE4903 /* TigerSnake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TigerSnake.json; sourceTree = "<group>"; };
 		997461A822658BD600CE4903 /* CommonDeathAdder.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CommonDeathAdder.json; sourceTree = "<group>"; };
 		997461B722658C6D00CE4903 /* Snake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snake.swift; sourceTree = "<group>"; };
+		9974D41E227AF93600998A88 /* Identification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Identification.png; sourceTree = "<group>"; };
+		9974D41F227AF93700998A88 /* Detection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Detection.png; sourceTree = "<group>"; };
 		9997377B2253080900566EB0 /* IdentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificationViewController.swift; sourceTree = "<group>"; };
 		99DB7EE3225229CE005B44E8 /* WhatSnake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatSnake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DB7EE6225229CE005B44E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 		99496E34225D742F003913F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9974D41F227AF93700998A88 /* Detection.png */,
+				9974D41E227AF93600998A88 /* Identification.png */,
 				990A16002262CAB500970ED5 /* Change.png */,
 				990A15FE2262C9BA00970ED5 /* Camera.png */,
 				990A15FA2262C99800970ED5 /* Saved.png */,
@@ -370,6 +376,7 @@
 				990A16012262CAB500970ED5 /* Change.png in Resources */,
 				99496E4B225D7E45003913F1 /* Circle.png in Resources */,
 				997461AA22658BD600CE4903 /* BlackHeadedPython.json in Resources */,
+				9974D420227AF93700998A88 /* Identification.png in Resources */,
 				997461B322658BD600CE4903 /* LowlandCopperhead.json in Resources */,
 				99496E4C225D7E45003913F1 /* Close.png in Resources */,
 				997461B222658BD600CE4903 /* WesternBrownSnake.json in Resources */,
@@ -377,6 +384,7 @@
 				997461AB22658BD600CE4903 /* EasternBrownSnake.json in Resources */,
 				99DB7EF1225229CF005B44E8 /* LaunchScreen.storyboard in Resources */,
 				997461AE22658BD600CE4903 /* IndianTaipan.json in Resources */,
+				9974D421227AF93700998A88 /* Detection.png in Resources */,
 				99DB7EEE225229CF005B44E8 /* Assets.xcassets in Resources */,
 				997461AC22658BD600CE4903 /* MulgaSnake.json in Resources */,
 				997461B522658BD600CE4903 /* TigerSnake.json in Resources */,

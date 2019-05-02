@@ -29,7 +29,7 @@ class DisplayViewController: UIViewController {
     }
     
     @IBAction func OnReturnButtonTouchUpInside(_ sender: Any) {
-        performSegue(withIdentifier: "IdentificationReturnSegue", sender: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

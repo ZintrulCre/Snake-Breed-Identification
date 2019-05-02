@@ -92,30 +92,30 @@ class DetectionViewController: UIViewController {
     func setUpCamera() {
         videoCapture = VideoCapture()
         videoCapture.delegate = self
-        videoCapture.fps = 50
-        weak var welf = self
+        videoCapture.fps = 60
+        weak var s = self
         
         videoCapture.setUp(sessionPreset: AVCaptureSession.Preset.vga640x480) { success in
             if success {
                 // Add the video preview into the UI.
-                if let previewLayer = welf?.videoCapture.previewLayer {
-                    welf?.videoPreview.layer.addSublayer(previewLayer)
-                    welf?.resizePreviewLayer()
+                if let previewLayer = s?.videoCapture.previewLayer {
+                    s?.videoPreview.layer.addSublayer(previewLayer)
+                    s?.resizePreviewLayer()
                 }
                 
                 
                 // Add the bounding box layers to the UI, on top of the video preview.
                 DispatchQueue.main.async {
-                    guard let  boxes = welf?.boundingBoxes,let videoLayer  = welf?.videoPreview.layer else {return}
+                    guard let  boxes = s?.boundingBoxes,let videoLayer  = s?.videoPreview.layer else {return}
                     for box in boxes {
                         box.addToLayer(videoLayer)
                     }
-                    welf?.semaphore.signal()
+                    s?.semaphore.signal()
                 }
                 
                 
                 // Once everything is set up, we can start capturing live video.
-                welf?.videoCapture.start()
+                s?.videoCapture.start()
                 
                 
                 //     yolo.buffer(from: image)
@@ -166,7 +166,7 @@ class DetectionViewController: UIViewController {
     
     
     func showOnMainThread(_ boundingBoxes: [YOLO.Prediction], _ elapsed: CFTimeInterval) {
-        weak var welf = self
+        weak var s = self
         
         DispatchQueue.main.async {
             // For debugging, to make sure the resized CVPixelBuffer is correct.
@@ -174,12 +174,12 @@ class DetectionViewController: UIViewController {
             //VTCreateCGImageFromCVPixelBuffer(resizedPixelBuffer, nil, &debugImage)
             //self.debugImageView.image = UIImage(cgImage: debugImage!)
             
-            welf?.show(predictions: boundingBoxes)
+            s?.show(predictions: boundingBoxes)
             
-            guard  let fps = welf?.measureFPS() else{return}
-            welf?.timeLabel.text = String(format: "Elapsed %.5f seconds - %.2f FPS", elapsed, fps)
+            guard  let fps = s?.measureFPS() else{return}
+            s?.timeLabel.text = String(format: "Elapsed %.5f seconds - %.2f FPS", elapsed, fps)
             
-            welf?.semaphore.signal()
+            s?.semaphore.signal()
         }
     }
     
@@ -245,13 +245,13 @@ extension DetectionViewController: VideoCaptureDelegate {
         //    predict(image: UIImage(named: "bridge00508")!); return
         //    semaphore.wait()
         
-        weak var welf = self
+        weak var s = self
         if let pixelBuffer = pixelBuffer {
             // For better throughput, perform the prediction on a background queue
             // instead of on the VideoCapture queue. We use the semaphore to block
             // the capture queue and drop frames when Core ML can't keep up.
             DispatchQueue.global().async {
-                welf?.predict(pixelBuffer: pixelBuffer)
+                s?.predict(pixelBuffer: pixelBuffer)
                 //        self.predictUsingVision(pixelBuffer: pixelBuffer)
             }
         }

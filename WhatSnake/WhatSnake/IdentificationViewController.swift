@@ -41,7 +41,8 @@ class IdentificationViewController: UIViewController {
             print (most_confident.identifier)
             print (most_confident.confidence)
             DispatchQueue.main.async {
-                self.breed = most_confident.identifier 
+                self.breed = most_confident.identifier
+                self.dismiss(animated: true, completion: nil)
                 self.performSegue(withIdentifier: "IdentifyingToDisplaySegue", sender: nil)
             }
         }

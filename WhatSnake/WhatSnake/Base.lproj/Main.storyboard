@@ -209,7 +209,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="Xz1-1N-gfm"/>
                                     <constraint firstAttribute="height" constant="48" id="ZdL-AF-INr"/>
                                 </constraints>
-                                <state key="normal" title="Import">
+                                <state key="normal" title="Import" image="Import.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -556,9 +556,11 @@
         <image name="Close.png" width="200" height="200"/>
         <image name="Detection.png" width="128" height="128"/>
         <image name="Identification.png" width="128" height="128"/>
+        <image name="Import.png" width="128" height="113"/>
         <image name="Save.png" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="aO2-T6-nqH"/>
         <segue reference="VL1-Ef-KSg"/>
         <segue reference="rUX-Xf-Wkx"/>
     </inferredMetricsTieBreakers>

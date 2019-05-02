@@ -560,8 +560,7 @@
         <image name="Save.png" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aO2-T6-nqH"/>
-        <segue reference="VL1-Ef-KSg"/>
+        <segue reference="OE8-pz-djD"/>
         <segue reference="rUX-Xf-Wkx"/>
     </inferredMetricsTieBreakers>
 </document>

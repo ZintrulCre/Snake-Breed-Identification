@@ -4,6 +4,28 @@ This is an iOS application for target detection and snake breed identification.
 
 The iOS application is in the folder *WhatSnake*.
 
+## State
+
+### Done
+
+- iOS application (WhatSnake)
+    - Main Page
+    - Snake Information
+    - Target Detection (YOLOv3)
+
+- Transfer Learning (VGG16, MobileNet)
+
+
+### ToDo
+
+- iOS application
+    - Model Conversion (Keras to Coreml)
+
+- Advance Model
+    - Faster-Rcnn
+    - SSD
+    - SeqSleepNet
+
 ## Demo
 
 ### Main Page

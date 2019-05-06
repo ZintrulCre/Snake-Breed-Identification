@@ -39,20 +39,37 @@ class DisplayViewController: UIViewController {
     }
     
     func SetText() {
-        if self.snake != nil {
-            self.type_name.contentMode = .scaleToFill
-            self.type_name.numberOfLines = 0
-            self.type_name.text = self.snake?.name
+        if self.snake == nil {
+            self.breed = self.breed!.replacingOccurrences(of: " ", with: "")
+            let file = Bundle.main.path(forResource: self.breed!, ofType: "json")
+            print("File", file!)
+            do {
+                print(self.breed!)
+                let content = try String(contentsOfFile: file!, encoding: String.Encoding.utf8)
+                let data = content.data(using: .utf8)!
+                let snake = try JSONDecoder().decode(Snake.self, from: data)
+                self.snake = snake
+            } catch let error as NSError {
+                print(error)
+            }
             
-            self.venomous.lineBreakMode = NSLineBreakMode.byWordWrapping
-            self.venomous.text = self.snake!.venomous ? "venomous" : "non-venomous"
-            self.venomous.textColor = self.snake!.venomous ? UIColor(red: 0.92, green: 0.09, blue: 0.13, alpha: 1):UIColor(red: 0.09, green: 0.61, blue: 0.64, alpha: 1)
-            
-            self.distribution.lineBreakMode = NSLineBreakMode.byWordWrapping
-            self.distribution.text = self.snake?.distribution
-            
-            self.info.text = self.snake?.description
         }
+        
+        self.type_name.contentMode = .scaleToFill
+        self.type_name.numberOfLines = 0
+        self.type_name.text = self.snake?.name
+        
+        self.venomous.lineBreakMode = NSLineBreakMode.byWordWrapping
+        self.venomous.text = self.snake!.venomous ? "venomous" : "non-venomous"
+        self.venomous.textColor = self.snake!.venomous ? UIColor(red: 0.92, green: 0.09, blue: 0.13, alpha: 1):UIColor(red: 0.09, green: 0.61, blue: 0.64, alpha: 1)
+        
+        self.distribution.lineBreakMode = NSLineBreakMode.byWordWrapping
+        self.distribution.text = self.snake?.distribution
+        
+        self.distribution.lineBreakMode = NSLineBreakMode.byWordWrapping;
+        self.distribution.numberOfLines = 0;
+            
+        self.info.text = self.snake?.description
     }
     /*
     // MARK: - Navigation

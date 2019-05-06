@@ -111,7 +111,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             let most_confident = result.first
             DispatchQueue.main.async {
                 self.identifier.text = most_confident?.identifier
-                self.confidence.text = String(describing: (most_confident?.confidence))
+                self.confidence.text = String(describing: (most_confident!.confidence))
             }
         }
         try? VNImageRequestHandler(cvPixelBuffer: pixel_buffer, options: [:]).perform([request])

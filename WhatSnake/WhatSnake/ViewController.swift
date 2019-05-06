@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         txts.sort()
         for txt in txts {
             let file = Bundle.main.path(forResource: txt, ofType: "json")
+//            print("File", file)
             do {
                 let content = try String(contentsOfFile: file!, encoding: String.Encoding.utf8)
                 let data = content.data(using: .utf8)!

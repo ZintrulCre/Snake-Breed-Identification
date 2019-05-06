@@ -104,7 +104,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let pixel_buffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)! else {return}
-        guard let model = try? VNCoreMLModel(for: MobileNet().model) else {return}
+        guard let model = try? VNCoreMLModel(for: SnakeNet().model) else {return}
         let request = VNCoreMLRequest(model: model) {
             (finished_request, err) in
             guard let result = finished_request.results as? [VNClassificationObservation] else {return}

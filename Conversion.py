@@ -1,10 +1,18 @@
+import sys
+
+if len(sys.argv) != 3:
+    sys.exit()
+
+if sys.argv[1] == '-h':
+    print('python Conversion.py <model.h5> <description>')
+    sys.exit()
+
 import os
 from tqdm import tqdm
-import tensorflow as tf
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 
-model_name = "Snake-VGG16"
-keras_model = load_model(model_name + ".h5")
+model_name = sys.argv[1].split('.')[0]
+keras_model = load_model(sys.argv[1])
 
 keras_model.summary()
 
@@ -25,5 +33,8 @@ coreml_model = coremltools.converters.keras.convert(keras_model,
                                                     class_labels=breeds,
                                                     image_scale=scale)
 
+coreml_model.author = "Zhengyu Chen"
+coreml_model.license = "BSD"
+coreml_model.short_description = sys.argv[2]
 
 coreml_model.save(model_name + ".mlmodel")

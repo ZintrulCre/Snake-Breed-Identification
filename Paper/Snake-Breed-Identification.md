@@ -60,7 +60,13 @@ In this project, image normalization is accomplished by using the scale function
 
 ### Data Augmentation
 
-When training computer vision models, often data augmentation will help whether we are using pre-trained models or building a neural network from scratch. And so data augmentation is one of the techniques that is often used to improve the performance of computer vision systems.
+When training computer vision models, collecting more data is an effective way to enhance the training but also a tedious and intricate process. In fact, for the majority of image recognition problems, we cannot get as much data as we expect. In order to obtain more data, data augmentation techniques is a very efficient method to improve the result. 
+
+Data augmentation contains many methods, including flipping, rotating, cropping, scaling, warping, color shifting, adding noise, etc.
+
+<example>
+
+Also there are different ways to do data augmentation. One is offline augmentation, which means to perform all augmentations in advance before starting to build the neural network, and store all the images on hard disk drivers. It can access data very fast once after images are loaded into the memory, but it will increase, or multiple, the size of the dataset, which consumes memory to a large extent, so this method fits small datasets well. The other one is online augmentation, which means to perform the augmentation on a mini-batch dataset right before they are fed into the neural network. This method is more suitable for large datasets because the memory is limited for staging large scale images. For this project, the total number of images we have is <number> which is not big, so both methods are fine. For offline augmentation, we can use the imgaug library which has powerful stochastic interface to augment images, and, for online augmentation, we can use the ImageDataGenerator function in the preprocessing.image module in Keras.
 
 ## Training
 
@@ -71,3 +77,7 @@ When training computer vision models, often data augmentation will help whether 
 ## Conclusion
 
 ## Future Work
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTIxMjMzNTAxOCwtMTQ0ODkyMzI1NSwyOT
+k1MjAwMDYsNDIzNDIxODY5LC0yMTIwMjY4MzE4XX0=
+-->

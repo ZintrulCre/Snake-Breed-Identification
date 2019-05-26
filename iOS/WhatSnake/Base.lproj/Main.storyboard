@@ -151,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="138.58695652173915"/>
+            <point key="canvasLocation" x="16" y="-29"/>
         </scene>
         <!--Detection View Controller-->
         <scene sceneID="Thm-j7-TIG">
@@ -191,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zN-ow-LjP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807" y="-550"/>
+            <point key="canvasLocation" x="716" y="-494"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="33b-9A-ji7">
@@ -312,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P8c-Au-3gI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="806" y="157"/>
+            <point key="canvasLocation" x="717" y="174"/>
         </scene>
         <!--Identification View Controller-->
         <scene sceneID="MpY-XY-InT">
@@ -360,7 +360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ik-bY-lDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="139"/>
+            <point key="canvasLocation" x="1394" y="174"/>
         </scene>
         <!--Display View Controller-->
         <scene sceneID="E54-pC-h3I">
@@ -546,7 +546,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wzn-Ua-wlb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2350.7246376811595" y="138.58695652173915"/>
+            <point key="canvasLocation" x="2068" y="174"/>
         </scene>
     </scenes>
     <resources>
@@ -560,7 +560,7 @@
         <image name="Save.png" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VL1-Ef-KSg"/>
+        <segue reference="OE8-pz-djD"/>
         <segue reference="rUX-Xf-Wkx"/>
     </inferredMetricsTieBreakers>
 </document>

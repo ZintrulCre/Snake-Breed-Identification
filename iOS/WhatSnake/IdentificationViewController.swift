@@ -30,7 +30,7 @@ class IdentificationViewController: UIViewController {
             fatalError("Can't convert UIImage to CIImage")
         }
         
-        guard let model = try?VNCoreMLModel(for: Tiny().model) else {
+        guard let model = try?VNCoreMLModel(for: Snake_Breed_Identification().model) else {
             fatalError("Can't load the CoreML model")
         }
         

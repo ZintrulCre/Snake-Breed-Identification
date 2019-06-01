@@ -30,6 +30,7 @@
 		996DD16822A24BE0003C32B4 /* Western Brown Snake.png in Resources */ = {isa = PBXBuildFile; fileRef = 996DD15E22A24BE0003C32B4 /* Western Brown Snake.png */; };
 		996DD16922A24BE0003C32B4 /* Lowland Copperhead.png in Resources */ = {isa = PBXBuildFile; fileRef = 996DD15F22A24BE0003C32B4 /* Lowland Copperhead.png */; };
 		996DD16A22A24BE0003C32B4 /* Mulga Snake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 996DD16022A24BE0003C32B4 /* Mulga Snake.jpg */; };
+		996DD16E22A25769003C32B4 /* Snake_Breed_Identification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 996DD16D22A25768003C32B4 /* Snake_Breed_Identification.mlmodel */; };
 		9974619A22649F0C00CE4903 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9974619922649F0C00CE4903 /* DisplayViewController.swift */; };
 		997461A922658BD600CE4903 /* SpottedPython.json in Resources */ = {isa = PBXBuildFile; fileRef = 9974619B22658BD500CE4903 /* SpottedPython.json */; };
 		997461AA22658BD600CE4903 /* BlackHeadedPython.json in Resources */ = {isa = PBXBuildFile; fileRef = 9974619C22658BD500CE4903 /* BlackHeadedPython.json */; };
@@ -107,6 +108,7 @@
 		996DD15E22A24BE0003C32B4 /* Western Brown Snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Western Brown Snake.png"; sourceTree = "<group>"; };
 		996DD15F22A24BE0003C32B4 /* Lowland Copperhead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lowland Copperhead.png"; sourceTree = "<group>"; };
 		996DD16022A24BE0003C32B4 /* Mulga Snake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Mulga Snake.jpg"; sourceTree = "<group>"; };
+		996DD16D22A25768003C32B4 /* Snake_Breed_Identification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Snake_Breed_Identification.mlmodel; path = Models/Snake_Breed_Identification.mlmodel; sourceTree = "<group>"; };
 		9974619922649F0C00CE4903 /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		9974619B22658BD500CE4903 /* SpottedPython.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpottedPython.json; sourceTree = "<group>"; };
 		9974619C22658BD500CE4903 /* BlackHeadedPython.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BlackHeadedPython.json; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 		9997378022530B8900566EB0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				996DD16D22A25768003C32B4 /* Snake_Breed_Identification.mlmodel */,
 				99F403CD226AFFA4005473A6 /* Tiny.mlmodel */,
 			);
 			name = Models;
@@ -491,6 +494,7 @@
 				99F403C8226AFF1B005473A6 /* CVPixelBuffer-UIImage.swift in Sources */,
 				99DB7EE7225229CE005B44E8 /* AppDelegate.swift in Sources */,
 				99F403CA226AFF3D005473A6 /* VideoCapture.swift in Sources */,
+				996DD16E22A25769003C32B4 /* Snake_Breed_Identification.mlmodel in Sources */,
 				99F403CE226AFFA4005473A6 /* Tiny.mlmodel in Sources */,
 				9997377C2253080900566EB0 /* IdentificationViewController.swift in Sources */,
 				99F403C4226AFEE4005473A6 /* Helper.swift in Sources */,

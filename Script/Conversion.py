@@ -20,7 +20,8 @@ breeds = []
 data_path = "../Data/"
 breed_names = os.listdir(data_path)
 for breed_name in tqdm(breed_names):
-    breeds.append(breed_name)
+    if breed_name != '.DS_Store':
+        breeds.append(breed_name)
 print(breeds)
 
 scale = 1/255.

@@ -17,7 +17,7 @@ keras_model = load_model(sys.argv[1])
 keras_model.summary()
 
 breeds = []
-data_path = "./Data/"
+data_path = "../Data/"
 breed_names = os.listdir(data_path)
 for breed_name in tqdm(breed_names):
     breeds.append(breed_name)

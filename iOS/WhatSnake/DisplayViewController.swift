@@ -34,7 +34,39 @@ class DisplayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        image_view.image = self.image
+        if self.image != nil {
+            image_view.image = self.image
+        } else {
+            if self.snake?.name == "Bandy Bandy" {
+                self.image_view.image = #imageLiteral(resourceName: "Bandy Bandy.jpg")
+            } else if self.snake?.name == "Black-Headed Python" {
+                self.image_view.image = #imageLiteral(resourceName: "Black-Headed Python.jpg")
+            } else if self.snake?.name == "Carpet Python" {
+                self.image_view.image = #imageLiteral(resourceName: "Carpet Python.jpg")
+            } else if self.snake?.name == "Coastal Taipan" {
+                self.image_view.image = #imageLiteral(resourceName: "Coastal Taipan.png")
+            } else if self.snake?.name == "Common Death Adder" {
+                self.image_view.image = #imageLiteral(resourceName: "Common Death Adder.jpg")
+            } else if self.snake?.name == "Eastern Brown Snake" {
+                self.image_view.image = #imageLiteral(resourceName: "Eastern Brown Snake.png")
+            } else if self.snake?.name == "Inland Taipan" {
+                self.image_view.image = #imageLiteral(resourceName: "Inland Taipan.jpg")
+            } else if self.snake?.name == "Lowland Copperhead" {
+                self.image_view.image = #imageLiteral(resourceName: "Lowland Copperhead.png")
+            } else if self.snake?.name == "Mulga Snake" {
+                self.image_view.image = #imageLiteral(resourceName: "Mulga Snake.jpg")
+            } else if self.snake?.name == "Red-Bellied Black Snake" {
+                self.image_view.image = #imageLiteral(resourceName: "Red Bellied Black Snake.png")
+            } else if self.snake?.name == "Spotted Python" {
+                self.image_view.image = #imageLiteral(resourceName: "Spotted Python.jpg")
+            } else if self.snake?.name == "Suta Suta" {
+                self.image_view.image = #imageLiteral(resourceName: "Suta Suta.jpg")
+            } else if self.snake?.name == "Tiger Snake" {
+                self.image_view.image = #imageLiteral(resourceName: "Tiger Snake.png")
+            } else if self.snake?.name == "Western Brown Snake" {
+                self.image_view.image = #imageLiteral(resourceName: "Western Brown Snake.png")
+            }
+        }
         SetText()
     }
     

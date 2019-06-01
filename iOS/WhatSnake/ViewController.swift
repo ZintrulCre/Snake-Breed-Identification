@@ -18,7 +18,7 @@ struct Snake: Decodable{
 class ViewController: UIViewController {
     @IBOutlet weak var table_view: UITableView!
 
-    var txts: [String] =  ["CarpetPython", "CoastalTaipan", "CommonDeathAdder", "EasternBrownSnake", "IndianTaipan", "LowlandCopperhead", "MulgaSnake", "RedBelliedBlackSnake", "SpottedPython", "SutaSuta", "TigerSnake", "WesternBrownSnake", "BlackHeadedPython", "BandyBandy"]
+    var txts: [String] =  ["CarpetPython", "CoastalTaipan", "CommonDeathAdder", "EasternBrownSnake", "InlandTaipan", "LowlandCopperhead", "MulgaSnake", "RedBelliedBlackSnake", "SpottedPython", "SutaSuta", "TigerSnake", "WesternBrownSnake", "BlackHeadedPython", "BandyBandy"]
 
     var snakes: [Snake] = []
     var snake: Snake? = nil
@@ -29,7 +29,6 @@ class ViewController: UIViewController {
         txts.sort()
         for txt in txts {
             let file = Bundle.main.path(forResource: txt, ofType: "json")
-//            print("File", file)
             do {
                 let content = try String(contentsOfFile: file!, encoding: String.Encoding.utf8)
                 let data = content.data(using: .utf8)!

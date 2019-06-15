@@ -33,8 +33,9 @@ iOS application for snake breed identification and object detection. 🐍
     - OpenCV
     - tqdm
 
-![Breed Classification](./README/Breed Classification.jpg)
-![Object Detection](./README/Object Detection.jpg)
+<img src='README/Breed Classification.jpg'>
+
+<img src='README/Object Detection.jpg'>
 
 ## Result
 

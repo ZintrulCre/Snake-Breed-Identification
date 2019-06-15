@@ -1,47 +1,46 @@
 # Snake Breed Identification
 
-This is an iOS application for target detection and snake breed identification.
+## Introduction
 
-The iOS application is in the folder *WhatSnake*.
+iOS application for snake breed identification and object detection. 🐍
 
-## State
+## Implementation
 
-### Done
+- Language
+    - Python3
+    - Swift
 
-- iOS application (WhatSnake)
-    - Main Page
-    - Snake Information
-    - Target Detection (YOLOv3)
+- Image Recognition
+    - Keras
+    - TensorFlow
+    - Numpy
 
-- Transfer Learning (VGG16, MobileNet)
+- Object Detection
+    - YOLOv3
 
+- iOS
+    - CoreML
+    - Vision
+    - AVCaptureSession
+    - DispatchQueue
 
-### ToDo
+- Visualization
+    - TensorBoard
+    - Pyplot
+    - Seaborn
 
-- iOS application
-    - Model Conversion (Keras to Coreml)
+- Other
+    - OpenCV
+    - tqdm
 
-- Advance Model
-    - Faster-Rcnn
-    - SSD
-    - SeqSleepNet
+![Breed Classification](./README/Breed Classification.jpg)
+![Object Detection](./README/Object Detection.jpg)
 
-## Demo
+## Result
 
-### Main Page
+- accuracy: 86.18%
+- loss: 0.4371
 
-<img src='Demo/Main Page.png'>
+- Hardware: 4 standard vCPUs, 15 GB RAM, NVIDIA Tesla T4 on Google Cloud Platform
 
-### Snake Information
-
-<img src='Demo/Venomous.png'>
-
-<img src='Demo/Non-venomous.png'>
-
-### Detection
-
-<img src='Demo/Detection.png'>
-
-### Video
-
-[Snake Breed Identification 20190502](https://www.youtube.com/watch?v=rGudAFElZk4&feature=youtu.be)
+- Demo: https://www.youtube.com/watch?v=O6wj2hX-cvg
